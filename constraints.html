@@ -80,7 +80,7 @@
                     <div class="box box-primary">
                         <div class="box-header with-border">
                             <i class="ion ion-key"></i>
-                            <h3 class="box-title">57 Foreign Key Constraints</h3>
+                            <h3 class="box-title">45 Foreign Key Constraints</h3>
                             <div class="box-tools pull-right">
                                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
@@ -170,11 +170,47 @@
                                         <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
                                     </tr>
                                     <tr>
-                                        <td>core_accountalias_activity_details_id_73ba6340_fk_core_acti</td>
+                                        <td>core_rate_variablerate_ptr_id_fa8611d0_fk_core_variablerate_id</td>
                                         <td>
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
-                                                    <td><a href='tables/core_accountalias.html'>core_accountalias</a><span>.activity_details_id</span></td>
+                                                    <td><a href='tables/core_rate.html'>core_rate</a><span>.variablerate_ptr_id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_variablerate.html'>core_variablerate</a><span>.id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>core_payment_payment_schedule_id_8a332af5_fk_core_paym</td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_payment.html'>core_payment</a><span>.payment_schedule_id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_paymentschedule.html'>core_paymentschedule</a><span>.id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>core_activitydetails_activitydetails_id_92e587e8_fk_core_acti</td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_activitydetails_service_providers.html'>core_activitydetails_service_providers</a><span>.activitydetails_id</span></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -188,29 +224,29 @@
                                         <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
                                     </tr>
                                     <tr>
-                                        <td>core_accountalias_section_info_id_fc664ab4_fk_core_sect</td>
+                                        <td>core_activitydetails_serviceprovider_id_7dae5962_fk_core_serv</td>
                                         <td>
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
-                                                    <td><a href='tables/core_accountalias.html'>core_accountalias</a><span>.section_info_id</span></td>
+                                                    <td><a href='tables/core_activitydetails_service_providers.html'>core_activitydetails_service_providers</a><span>.serviceprovider_id</span></td>
                                                 </tr>
                                             </table>
                                         </td>
                                         <td>
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
-                                                    <td><a href='tables/core_sectioninfo.html'>core_sectioninfo</a><span>.id</span></td>
+                                                    <td><a href='tables/core_serviceprovider.html'>core_serviceprovider</a><span>.id</span></td>
                                                 </tr>
                                             </table>
                                         </td>
                                         <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
                                     </tr>
                                     <tr>
-                                        <td>core_historicalratep_history_user_id_4eac7eec_fk_core_user</td>
+                                        <td>django_admin_log_user_id_c564eba6_fk_core_user_id</td>
                                         <td>
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
-                                                    <td><a href='tables/core_historicalrateperdate.html'>core_historicalrateperdate</a><span>.history_user_id</span></td>
+                                                    <td><a href='tables/django_admin_log.html'>django_admin_log</a><span>.user_id</span></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -218,6 +254,24 @@
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
                                                     <td><a href='tables/core_user.html'>core_user</a><span>.id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>django_admin_log_content_type_id_c4bce8eb_fk_django_co</td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/django_admin_log.html'>django_admin_log</a><span>.content_type_id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/django_content_type.html'>django_content_type</a><span>.id</span></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -254,6 +308,42 @@
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
                                                     <td><a href='tables/auth_group.html'>auth_group</a><span>.id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>core_activitydetails_section_id_0ad89683_fk_core_sect</td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_activitydetails_supplementary_activity_for.html'>core_activitydetails_supplementary_activity_for</a><span>.section_id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_section.html'>core_section</a><span>.id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>core_activitydetails_activitydetails_id_033f6a2e_fk_core_acti</td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_activitydetails_supplementary_activity_for.html'>core_activitydetails_supplementary_activity_for</a><span>.activitydetails_id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_activitydetails.html'>core_activitydetails</a><span>.id</span></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -386,24 +476,6 @@
                                         <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
                                     </tr>
                                     <tr>
-                                        <td>core_rateperdate_changed_by_id_8058f55c_fk_core_user_id</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_rateperdate.html'>core_rateperdate</a><span>.changed_by_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_user.html'>core_user</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
                                         <td>core_price_variablerate_ptr_id_91a1b913_fk_core_variablerate_id</td>
                                         <td>
                                             <table border='0' cellspacing='0' cellpadding='0'>
@@ -494,6 +566,60 @@
                                         <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
                                     </tr>
                                     <tr>
+                                        <td>core_relatedperson_main_case_id_f0d129a9_fk_core_case_id</td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_relatedperson.html'>core_relatedperson</a><span>.main_case_id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_case.html'>core_case</a><span>.id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>core_section_allowed_section_id_7445c299_fk_core_sect</td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_section_allowed_for_steps.html'>core_section_allowed_for_steps</a><span>.section_id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_section.html'>core_section</a><span>.id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>core_section_allowed_effortstep_id_d3b9ac71_fk_core_effo</td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_section_allowed_for_steps.html'>core_section_allowed_for_steps</a><span>.effortstep_id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_effortstep.html'>core_effortstep</a><span>.id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
+                                    </tr>
+                                    <tr>
                                         <td>core_user_team_id_5bf2f9f1_fk_core_team_id</td>
                                         <td>
                                             <table border='0' cellspacing='0' cellpadding='0'>
@@ -506,42 +632,6 @@
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
                                                     <td><a href='tables/core_team.html'>core_team</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_activitydetails_to_activitydetails_i_42e6f49c_fk_core_acti</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_activitydetails_main_activities.html'>core_activitydetails_main_activities</a><span>.to_activitydetails_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_activitydetails.html'>core_activitydetails</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_activitydetails_from_activitydetails_1b4a7b20_fk_core_acti</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_activitydetails_main_activities.html'>core_activitydetails_main_activities</a><span>.from_activitydetails_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_activitydetails.html'>core_activitydetails</a><span>.id</span></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -656,65 +746,11 @@
                                         <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
                                     </tr>
                                     <tr>
-                                        <td>core_team_leader_id_8c8a2fb8_fk_core_user_id</td>
+                                        <td>core_activitydetails_to_activitydetails_i_42e6f49c_fk_core_acti</td>
                                         <td>
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
-                                                    <td><a href='tables/core_team.html'>core_team</a><span>.leader_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_user.html'>core_user</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_rate_variablerate_ptr_id_fa8611d0_fk_core_variablerate_id</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_rate.html'>core_rate</a><span>.variablerate_ptr_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_variablerate.html'>core_variablerate</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_payment_payment_schedule_id_8a332af5_fk_core_paym</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_payment.html'>core_payment</a><span>.payment_schedule_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_paymentschedule.html'>core_paymentschedule</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_activitydetails_activitydetails_id_92e587e8_fk_core_acti</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_activitydetails_service_providers.html'>core_activitydetails_service_providers</a><span>.activitydetails_id</span></td>
+                                                    <td><a href='tables/core_activitydetails_main_activities.html'>core_activitydetails_main_activities</a><span>.to_activitydetails_id</span></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -728,83 +764,11 @@
                                         <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
                                     </tr>
                                     <tr>
-                                        <td>core_activitydetails_serviceprovider_id_7dae5962_fk_core_serv</td>
+                                        <td>core_activitydetails_from_activitydetails_1b4a7b20_fk_core_acti</td>
                                         <td>
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
-                                                    <td><a href='tables/core_activitydetails_service_providers.html'>core_activitydetails_service_providers</a><span>.serviceprovider_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_serviceprovider.html'>core_serviceprovider</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>django_admin_log_user_id_c564eba6_fk_core_user_id</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/django_admin_log.html'>django_admin_log</a><span>.user_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_user.html'>core_user</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>django_admin_log_content_type_id_c4bce8eb_fk_django_co</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/django_admin_log.html'>django_admin_log</a><span>.content_type_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/django_content_type.html'>django_content_type</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_activitydetails_section_id_0ad89683_fk_core_sect</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_activitydetails_supplementary_activity_for.html'>core_activitydetails_supplementary_activity_for</a><span>.section_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_section.html'>core_section</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_activitydetails_activitydetails_id_033f6a2e_fk_core_acti</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_activitydetails_supplementary_activity_for.html'>core_activitydetails_supplementary_activity_for</a><span>.activitydetails_id</span></td>
+                                                    <td><a href='tables/core_activitydetails_main_activities.html'>core_activitydetails_main_activities</a><span>.from_activitydetails_id</span></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -812,186 +776,6 @@
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
                                                     <td><a href='tables/core_activitydetails.html'>core_activitydetails</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_relatedperson_main_case_id_f0d129a9_fk_core_case_id</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_relatedperson.html'>core_relatedperson</a><span>.main_case_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_case.html'>core_case</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_case_effort_step_id_64ae08a0_fk_core_effortstep_id</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_case.html'>core_case</a><span>.effort_step_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_effortstep.html'>core_effortstep</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_case_acting_municipality__90f8e17b_fk_core_muni</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_case.html'>core_case</a><span>.acting_municipality_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_municipality.html'>core_municipality</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_case_paying_municipality__54fadff6_fk_core_muni</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_case.html'>core_case</a><span>.paying_municipality_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_municipality.html'>core_municipality</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_case_case_worker_id_9326dffa_fk_core_user_id</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_case.html'>core_case</a><span>.case_worker_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_user.html'>core_user</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_case_target_group_id_1ffe0068_fk_core_targetgroup_id</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_case.html'>core_case</a><span>.target_group_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_targetgroup.html'>core_targetgroup</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_case_residence_municipali_97f4496a_fk_core_muni</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_case.html'>core_case</a><span>.residence_municipality_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_municipality.html'>core_municipality</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_case_district_id_2d51464f_fk_core_schooldistrict_id</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_case.html'>core_case</a><span>.district_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_schooldistrict.html'>core_schooldistrict</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_section_allowed_section_id_7445c299_fk_core_sect</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_section_allowed_for_steps.html'>core_section_allowed_for_steps</a><span>.section_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_section.html'>core_section</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>core_section_allowed_effortstep_id_d3b9ac71_fk_core_effo</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_section_allowed_for_steps.html'>core_section_allowed_for_steps</a><span>.effortstep_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_effortstep.html'>core_effortstep</a><span>.id</span></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -1052,24 +836,6 @@
                                         <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
                                     </tr>
                                     <tr>
-                                        <td>core_historicalpayment_history_user_id_ef303773_fk_core_user_id</td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_historicalpayment.html'>core_historicalpayment</a><span>.history_user_id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table border='0' cellspacing='0' cellpadding='0'>
-                                                <tr>
-                                                    <td><a href='tables/core_user.html'>core_user</a><span>.id</span></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-                                    </tr>
-                                    <tr>
                                         <td>auth_group_permissions_group_id_b120cbf9_fk_auth_group_id</td>
                                         <td>
                                             <table border='0' cellspacing='0' cellpadding='0'>
@@ -1100,6 +866,24 @@
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
                                                     <td><a href='tables/auth_permission.html'>auth_permission</a><span>.id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>core_team_leader_id_8c8a2fb8_fk_core_user_id</td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_team.html'>core_team</a><span>.leader_id</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <table border='0' cellspacing='0' cellpadding='0'>
+                                                <tr>
+                                                    <td><a href='tables/core_user.html'>core_user</a><span>.id</span></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -1147,9 +931,9 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><a href='tables/mailer_messagelog.html'>mailer_messagelog</a></td>
-                                        <td>mailer_messagelog_priority_5e712cf3_check</td>
-                                        <td>((priority &gt;= 0))</td>
+                                        <td><a href='tables/django_admin_log.html'>django_admin_log</a></td>
+                                        <td>django_admin_log_action_flag_check</td>
+                                        <td>((action_flag &gt;= 0))</td>
                                     </tr>
                                     <tr>
                                         <td><a href='tables/core_paymentschedule.html'>core_paymentschedule</a></td>
@@ -1175,21 +959,6 @@
                                         <td><a href='tables/core_effortstep.html'>core_effortstep</a></td>
                                         <td>core_effortstep_number_check</td>
                                         <td>((number &gt;= 0))</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href='tables/mailer_message.html'>mailer_message</a></td>
-                                        <td>mailer_message_priority_4f7b1370_check</td>
-                                        <td>((priority &gt;= 0))</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href='tables/django_admin_log.html'>django_admin_log</a></td>
-                                        <td>django_admin_log_action_flag_check</td>
-                                        <td>((action_flag &gt;= 0))</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href='tables/core_case.html'>core_case</a></td>
-                                        <td>core_case_scaling_step_check</td>
-                                        <td>((scaling_step &gt;= 0))</td>
                                     </tr>
                                     <tr>
                                         <td><a href='tables/core_historicalcase.html'>core_historicalcase</a></td>

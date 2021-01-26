@@ -73,7 +73,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>core_rateperdate</h1><p><span id="recordNumber">30</span> rows</p><br />
+                    <h1>core_rateperdate</h1><p><span id="recordNumber">0</span> rows</p><br />
                 </section>
                 <!-- Main content -->
                 <section class="content">
@@ -191,44 +191,6 @@
                                     </td>
                                     <td></td>
                                 </tr>
-                                <tr>
-                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="changed_by_id">changed_by_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>null</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                            <tr>
-                                                <td title="core_rateperdate.changed_by_id references core_user.id via core_rateperdate_changed_by_id_8058f55c_fk_core_user_id"><a href='core_user.html'>core_user</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_rateperdate_changed_by_id_8058f55c_fk_core_user_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="changed_date">changed_date</span></td>
-                                    <td>timestamptz</td>
-                                    <td>35,6</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>null</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -260,12 +222,6 @@
                                     <td>id</td>
                                 </tr>
                                 <tr>
-                                    <td title='Indexed'>core_rateperdate_changed_by_id_8058f55c</td>
-                                    <td>Performance</td>
-                                    <td><span title='Ascending'>Asc</span></td>
-                                    <td>changed_by_id</td>
-                                </tr>
-                                <tr>
                                     <td title='Indexed'>core_rateperdate_main_rate_id_a786f60a</td>
                                     <td>Performance</td>
                                     <td><span title='Ascending'>Asc</span></td>
@@ -294,28 +250,17 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="287,5,648,280">
-<area shape="rect" id="node2" href="core_user.html" target="_top" title="core_user" alt="" coords="38,195,210,371">
-<area shape="rect" id="node3" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="5,84,243,177">
+<area shape="rect" id="node1" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="287,5,613,221">
+<area shape="rect" id="node2" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="5,125,243,219">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/core_rateperdate.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="610,111,809,199">
-<area shape="rect" id="node2" href="core_user.html" target="_top" title="core_user" alt="" coords="280,424,452,600">
-<area shape="rect" id="node11" href="core_team.html" target="_top" title="core_team" alt="" coords="25,456,203,544">
-<area shape="rect" id="node3" href="core_case.html" target="_top" title="core_case" alt="" coords="623,216,796,304">
-<area shape="rect" id="node4" href="core_historicalcase.html" target="_top" title="core_historicalcase" alt="" coords="583,321,835,409">
-<area shape="rect" id="node5" href="core_historicalpayment.html" target="_top" title="core_historicalpayment" alt="" coords="565,427,853,515">
-<area shape="rect" id="node6" href="core_historicalrateperdate.html" target="_top" title="core_historicalrateperdate" alt="" coords="553,532,866,620">
-<area shape="rect" id="node7" href="core_price.html" target="_top" title="core_price" alt="" coords="621,1245,798,1333">
-<area shape="rect" id="node8" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="247,1137,485,1231">
-<area shape="rect" id="node9" href="core_rate.html" target="_top" title="core_rate" alt="" coords="625,1140,794,1228">
-<area shape="rect" id="node10" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="529,848,890,1123">
-<area shape="rect" id="node12" href="core_user_groups.html" target="_top" title="core_user_groups" alt="" coords="589,637,829,725">
-<area shape="rect" id="node13" href="core_user_user_permissions.html" target="_top" title="core_user_user_permissions" alt="" coords="545,743,873,831">
-<area shape="rect" id="node14" href="django_admin_log.html" target="_top" title="django_admin_log" alt="" coords="587,5,831,93">
+<area shape="rect" id="node1" href="core_price.html" target="_top" title="core_price" alt="" coords="361,5,539,93">
+<area shape="rect" id="node2" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="5,108,243,201">
+<area shape="rect" id="node3" href="core_rate.html" target="_top" title="core_rate" alt="" coords="365,111,535,199">
+<area shape="rect" id="node4" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="287,216,613,432">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_rateperdate.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>

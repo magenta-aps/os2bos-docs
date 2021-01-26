@@ -73,7 +73,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>core_user</h1><p><span id="recordNumber">7</span> rows</p><br />
+                    <h1>core_user</h1><p><span id="recordNumber">0</span> rows</p><br />
                 </section>
                 <!-- Main content -->
                 <section class="content">
@@ -116,24 +116,12 @@
                                                 <td class="constraint detail">core_activity_approval_user_id_98590644_fk_core_user_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
-                                                <td title="core_case.case_worker_id references core_user.id via core_case_case_worker_id_9326dffa_fk_core_user_id"><a href='core_case.html'>core_case</a><span class='relatedKey'>.case_worker_id</span></td>
+                                                <td title="core_case.case_worker_id references core_user.id via core_case_case_worker_id_9326dffa_fk_core_user_id"><a href='../../public/tables/core_case.html'>core_case</a><span class='relatedKey'>.case_worker_id</span></td>
                                                 <td class="constraint detail">core_case_case_worker_id_9326dffa_fk_core_user_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="core_historicalcase.history_user_id references core_user.id via core_historicalcase_history_user_id_601d37c5_fk_core_user_id"><a href='core_historicalcase.html'>core_historicalcase</a><span class='relatedKey'>.history_user_id</span></td>
                                                 <td class="constraint detail">core_historicalcase_history_user_id_601d37c5_fk_core_user_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td title="core_historicalpayment.history_user_id references core_user.id via core_historicalpayment_history_user_id_ef303773_fk_core_user_id"><a href='core_historicalpayment.html'>core_historicalpayment</a><span class='relatedKey'>.history_user_id</span></td>
-                                                <td class="constraint detail">core_historicalpayment_history_user_id_ef303773_fk_core_user_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td title="core_historicalrateperdate.history_user_id references core_user.id via core_historicalratep_history_user_id_4eac7eec_fk_core_user"><a href='core_historicalrateperdate.html'>core_historicalrateperdate</a><span class='relatedKey'>.history_user_id</span></td>
-                                                <td class="constraint detail">core_historicalratep_history_user_id_4eac7eec_fk_core_user<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td title="core_rateperdate.changed_by_id references core_user.id via core_rateperdate_changed_by_id_8058f55c_fk_core_user_id"><a href='core_rateperdate.html'>core_rateperdate</a><span class='relatedKey'>.changed_by_id</span></td>
-                                                <td class="constraint detail">core_rateperdate_changed_by_id_8058f55c_fk_core_user_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="core_team.leader_id references core_user.id via core_team_leader_id_8c8a2fb8_fk_core_user_id"><a href='core_team.html'>core_team</a><span class='relatedKey'>.leader_id</span></td>
@@ -438,48 +426,41 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="645,5,867,299">
-<area shape="rect" id="node2" href="core_user.html" target="_top" title="core_user" alt="" coords="228,1187,548,1637">
-<area shape="rect" id="node8" href="core_team.html" target="_top" title="core_team" alt="" coords="5,1336,184,1483">
-<area shape="rect" id="node3" href="core_case.html" target="_top" title="core_case" alt="" coords="616,316,896,668">
-<area shape="rect" id="node4" href="core_historicalcase.html" target="_top" title="core_historicalcase" alt="" coords="629,685,883,920">
-<area shape="rect" id="node5" href="core_historicalpayment.html" target="_top" title="core_historicalpayment" alt="" coords="612,937,900,1113">
-<area shape="rect" id="node6" href="core_historicalrateperdate.html" target="_top" title="core_historicalrateperdate" alt="" coords="599,1131,913,1365">
-<area shape="rect" id="node7" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="638,1383,874,1559">
-<area shape="rect" id="node9" href="core_user_groups.html" target="_top" title="core_user_groups" alt="" coords="636,1576,876,1728">
-<area shape="rect" id="node10" href="core_user_user_permissions.html" target="_top" title="core_user_user_permissions" alt="" coords="592,1745,920,1897">
-<area shape="rect" id="node11" href="django_admin_log.html" target="_top" title="django_admin_log" alt="" coords="634,1915,878,2091">
+<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="654,877,876,1171">
+<area shape="rect" id="node2" href="core_user.html" target="_top" title="core_user" alt="" coords="237,541,557,992">
+<area shape="rect" id="node4" href="core_team.html" target="_top" title="core_team" alt="" coords="14,515,193,661">
+<area shape="rect" id="node3" title="public.core_case" alt="" coords="625,5,905,328">
+<area shape="rect" id="node5" href="core_historicalcase.html" target="_top" title="core_historicalcase" alt="" coords="638,1188,892,1452">
+<area shape="rect" id="node6" href="core_user_groups.html" target="_top" title="core_user_groups" alt="" coords="645,345,885,497">
+<area shape="rect" id="node7" href="core_user_user_permissions.html" target="_top" title="core_user_user_permissions" alt="" coords="601,515,929,667">
+<area shape="rect" id="node8" href="django_admin_log.html" target="_top" title="django_admin_log" alt="" coords="643,684,887,860">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/core_user.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="auth_permission.html" target="_top" title="auth_permission" alt="" coords="633,424,865,512">
-<area shape="rect" id="node2" href="django_content_type.html" target="_top" title="django_content_type" alt="" coords="254,517,522,605">
-<area shape="rect" id="node3" href="core_activity.html" target="_top" title="core_activity" alt="" coords="1321,1328,1544,1621">
-<area shape="rect" id="node4" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="988,111,1239,199">
-<area shape="rect" id="node5" href="core_approvallevel.html" target="_top" title="core_approvallevel" alt="" coords="989,548,1238,636">
-<area shape="rect" id="node6" href="core_user.html" target="_top" title="core_user" alt="" coords="228,1076,548,1527">
-<area shape="rect" id="node7" href="core_activitydetails.html" target="_top" title="core_activitydetails" alt="" coords="985,1492,1241,1580">
-<area shape="rect" id="node8" href="core_serviceprovider.html" target="_top" title="core_serviceprovider" alt="" coords="980,1597,1247,1685">
-<area shape="rect" id="node9" href="core_case.html" target="_top" title="core_case" alt="" coords="609,55,889,407">
-<area shape="rect" id="node22" href="core_team.html" target="_top" title="core_team" alt="" coords="5,1225,184,1372">
-<area shape="rect" id="node10" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="268,181,508,269">
-<area shape="rect" id="node11" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="263,76,513,164">
-<area shape="rect" id="node12" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="279,287,497,375">
-<area shape="rect" id="node13" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="269,392,507,480">
-<area shape="rect" id="node14" href="core_case_efforts.html" target="_top" title="core_case_efforts" alt="" coords="995,216,1231,304">
-<area shape="rect" id="node15" href="core_historicalcase.html" target="_top" title="core_historicalcase" alt="" coords="621,1011,876,1245">
-<area shape="rect" id="node16" href="core_historicalpayment.html" target="_top" title="core_historicalpayment" alt="" coords="605,1263,893,1439">
-<area shape="rect" id="node17" href="core_historicalrateperdate.html" target="_top" title="core_historicalrateperdate" alt="" coords="592,759,905,993">
-<area shape="rect" id="node18" href="core_paymentschedule.html" target="_top" title="core_paymentschedule" alt="" coords="1588,1331,1875,1419">
-<area shape="rect" id="node19" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="631,1492,867,1668">
-<area shape="rect" id="node20" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="269,1544,507,1632">
-<area shape="rect" id="node21" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="987,5,1240,93">
-<area shape="rect" id="node23" href="core_user_groups.html" target="_top" title="core_user_groups" alt="" coords="629,1685,869,1837">
-<area shape="rect" id="node24" href="auth_group.html" target="_top" title="auth_group" alt="" coords="294,1747,482,1835">
-<area shape="rect" id="node25" href="core_user_user_permissions.html" target="_top" title="core_user_user_permissions" alt="" coords="949,653,1277,805">
-<area shape="rect" id="node26" href="django_admin_log.html" target="_top" title="django_admin_log" alt="" coords="627,529,871,705">
+<area shape="rect" id="node1" href="auth_permission.html" target="_top" title="auth_permission" alt="" coords="625,1080,857,1168">
+<area shape="rect" id="node2" href="django_content_type.html" target="_top" title="django_content_type" alt="" coords="263,1065,531,1153">
+<area shape="rect" id="node3" href="core_activity.html" target="_top" title="core_activity" alt="" coords="1297,553,1520,847">
+<area shape="rect" id="node4" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="964,63,1214,151">
+<area shape="rect" id="node5" href="core_approvallevel.html" target="_top" title="core_approvallevel" alt="" coords="964,407,1214,495">
+<area shape="rect" id="node6" href="core_user.html" target="_top" title="core_user" alt="" coords="237,472,557,923">
+<area shape="rect" id="node7" href="core_activitydetails.html" target="_top" title="core_activitydetails" alt="" coords="961,717,1217,805">
+<area shape="rect" id="node8" href="core_serviceprovider.html" target="_top" title="core_serviceprovider" alt="" coords="956,823,1222,911">
+<area shape="rect" id="node9" title="public.core_case" alt="" coords="601,24,881,347">
+<area shape="rect" id="node14" href="core_team.html" target="_top" title="core_team" alt="" coords="14,445,193,592">
+<area shape="rect" id="node10" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="277,111,517,199">
+<area shape="rect" id="node11" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="272,5,522,93">
+<area shape="rect" id="node12" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="288,252,506,340">
+<area shape="rect" id="node13" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="278,357,516,445">
+<area shape="rect" id="node15" href="core_case_efforts.html" target="_top" title="core_case_efforts" alt="" coords="971,168,1207,256">
+<area shape="rect" id="node16" href="core_historicalcase.html" target="_top" title="core_historicalcase" alt="" coords="614,400,868,664">
+<area shape="rect" id="node17" href="core_paymentschedule.html" target="_top" title="core_paymentschedule" alt="" coords="1564,556,1850,644">
+<area shape="rect" id="node18" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="962,273,1216,361">
+<area shape="rect" id="node19" href="core_user_groups.html" target="_top" title="core_user_groups" alt="" coords="621,717,861,869">
+<area shape="rect" id="node20" href="auth_group.html" target="_top" title="auth_group" alt="" coords="303,940,491,1028">
+<area shape="rect" id="node21" href="core_user_user_permissions.html" target="_top" title="core_user_user_permissions" alt="" coords="925,512,1253,664">
+<area shape="rect" id="node22" href="django_admin_log.html" target="_top" title="django_admin_log" alt="" coords="619,887,863,1063">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_user.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
