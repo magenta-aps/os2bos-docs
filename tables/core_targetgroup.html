@@ -112,7 +112,7 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_case.target_group_id references core_targetgroup.id via core_case_target_group_id_1ffe0068_fk_core_targetgroup_id"><a href='../../public/tables/core_case.html'>core_case</a><span class='relatedKey'>.target_group_id</span></td>
+                                                <td title="core_case.target_group_id references core_targetgroup.id via core_case_target_group_id_1ffe0068_fk_core_targetgroup_id"><a href='core_case.html'>core_case</a><span class='relatedKey'>.target_group_id</span></td>
                                                 <td class="constraint detail">core_case_target_group_id_1ffe0068_fk_core_targetgroup_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
@@ -149,9 +149,9 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="required_fields_for_case">required_fields_for_case</span></td>
-                                    <td>varchar</td>
-                                    <td>128</td>
+                                    <td><span id="active">active</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -166,9 +166,9 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="active">active</span></td>
-                                    <td>bool</td>
-                                    <td>1</td>
+                                    <td><span id="required_fields_for_case">required_fields_for_case</span></td>
+                                    <td>varchar</td>
+                                    <td>1024</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -235,29 +235,28 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" title="public.core_case" alt="" coords="503,5,783,328">
-<area shape="rect" id="node2" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="5,401,385,588">
-<area shape="rect" id="node3" href="core_effort_allowed_for_target_groups.html" target="_top" title="core_effort_allowed_for_target_groups" alt="" coords="437,345,850,497">
-<area shape="rect" id="node4" href="core_section_allowed_for_target_groups.html" target="_top" title="core_section_allowed_for_target_groups" alt="" coords="429,515,857,667">
+<area shape="rect" id="node1" href="core_case.html" target="_top" title="core_case" alt="" coords="513,5,793,357">
+<area shape="rect" id="node2" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="5,431,395,617">
+<area shape="rect" id="node3" href="core_effort_allowed_for_target_groups.html" target="_top" title="core_effort_allowed_for_target_groups" alt="" coords="446,375,859,527">
+<area shape="rect" id="node4" href="core_section_allowed_for_target_groups.html" target="_top" title="core_section_allowed_for_target_groups" alt="" coords="439,544,867,696">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/core_targetgroup.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="1066,328,1316,416">
-<area shape="rect" id="node2" title="public.core_case" alt="" coords="653,125,933,448">
-<area shape="rect" id="node3" href="core_section.html" target="_top" title="core_section" alt="" coords="695,465,891,553">
-<area shape="rect" id="node4" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="299,216,539,304">
-<area shape="rect" id="node5" href="core_user.html" target="_top" title="core_user" alt="" coords="333,5,505,93">
-<area shape="rect" id="node6" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="294,111,544,199">
-<area shape="rect" id="node7" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="310,357,528,445">
-<area shape="rect" id="node8" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="229,528,609,715">
-<area shape="rect" id="node9" href="core_team.html" target="_top" title="core_team" alt="" coords="6,5,185,93">
-<area shape="rect" id="node10" href="core_case_efforts.html" target="_top" title="core_case_efforts" alt="" coords="1073,603,1309,691">
-<area shape="rect" id="node11" href="core_effort.html" target="_top" title="core_effort" alt="" coords="702,653,884,741">
-<area shape="rect" id="node12" href="core_effort_allowed_for_target_groups.html" target="_top" title="core_effort_allowed_for_target_groups" alt="" coords="984,708,1398,860">
-<area shape="rect" id="node13" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="1064,223,1318,311">
-<area shape="rect" id="node14" href="core_section_allowed_for_target_groups.html" target="_top" title="core_section_allowed_for_target_groups" alt="" coords="977,433,1405,585">
+<area shape="rect" id="node1" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="851,257,1102,345">
+<area shape="rect" id="node2" href="core_case.html" target="_top" title="core_case" alt="" coords="439,52,719,404">
+<area shape="rect" id="node3" href="core_section.html" target="_top" title="core_section" alt="" coords="481,421,677,509">
+<area shape="rect" id="node4" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="80,216,320,304">
+<area shape="rect" id="node5" href="core_user.html" target="_top" title="core_user" alt="" coords="114,5,286,93">
+<area shape="rect" id="node6" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="75,111,325,199">
+<area shape="rect" id="node7" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="91,321,309,409">
+<area shape="rect" id="node8" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="5,484,395,671">
+<area shape="rect" id="node9" href="core_case_efforts.html" target="_top" title="core_case_efforts" alt="" coords="859,547,1095,635">
+<area shape="rect" id="node10" href="core_effort.html" target="_top" title="core_effort" alt="" coords="488,609,669,697">
+<area shape="rect" id="node11" href="core_effort_allowed_for_target_groups.html" target="_top" title="core_effort_allowed_for_target_groups" alt="" coords="770,652,1183,804">
+<area shape="rect" id="node12" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="850,55,1103,143">
+<area shape="rect" id="node13" href="core_section_allowed_for_target_groups.html" target="_top" title="core_section_allowed_for_target_groups" alt="" coords="763,377,1191,529">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_targetgroup.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>

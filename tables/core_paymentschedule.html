@@ -360,7 +360,7 @@
                                     <td><span id="payment_cost_type">payment_cost_type</span></td>
                                     <td>varchar</td>
                                     <td>128</td>
-                                    <td title=''></td>
+                                    <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>null</td>
                                     <td>
@@ -390,6 +390,23 @@
                                                 <td title="core_paymentschedule.payment_rate_id references core_rate.variablerate_ptr_id via core_paymentschedule_payment_rate_id_2e6d7529_fk_core_rate"><a href='core_rate.html'>core_rate</a><span class='relatedKey'>.variablerate_ptr_id</span></td>
                                                 <td class="constraint detail">core_paymentschedule_payment_rate_id_2e6d7529_fk_core_rate<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="payment_date">payment_date</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
                                     <td></td>
@@ -492,7 +509,7 @@
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
 <area shape="rect" id="node1" href="core_payment.html" target="_top" title="core_payment" alt="" coords="847,5,1089,181">
-<area shape="rect" id="node2" href="core_paymentschedule.html" target="_top" title="core_paymentschedule" alt="" coords="381,143,803,681">
+<area shape="rect" id="node2" href="core_paymentschedule.html" target="_top" title="core_paymentschedule" alt="" coords="381,143,803,711">
 <area shape="rect" id="node3" href="core_activity.html" target="_top" title="core_activity" alt="" coords="60,527,283,820">
 <area shape="rect" id="node4" href="core_paymentmethoddetails.html" target="_top" title="core_paymentmethoddetails" alt="" coords="5,392,337,509">
 <area shape="rect" id="node5" href="core_rate.html" target="_top" title="core_rate" alt="" coords="57,837,285,955">
@@ -502,18 +519,18 @@
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="371,319,593,612">
-<area shape="rect" id="node2" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="13,199,264,287">
-<area shape="rect" id="node3" href="core_approvallevel.html" target="_top" title="core_approvallevel" alt="" coords="14,304,263,392">
-<area shape="rect" id="node4" href="core_user.html" target="_top" title="core_user" alt="" coords="53,409,225,497">
-<area shape="rect" id="node5" href="core_activitydetails.html" target="_top" title="core_activitydetails" alt="" coords="11,515,267,603">
-<area shape="rect" id="node6" href="core_serviceprovider.html" target="_top" title="core_serviceprovider" alt="" coords="5,620,272,708">
+<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="371,323,593,616">
+<area shape="rect" id="node2" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="13,203,264,291">
+<area shape="rect" id="node3" href="core_approvallevel.html" target="_top" title="core_approvallevel" alt="" coords="14,308,263,396">
+<area shape="rect" id="node4" href="core_user.html" target="_top" title="core_user" alt="" coords="53,413,225,501">
+<area shape="rect" id="node5" href="core_activitydetails.html" target="_top" title="core_activitydetails" alt="" coords="11,519,267,607">
+<area shape="rect" id="node6" href="core_serviceprovider.html" target="_top" title="core_serviceprovider" alt="" coords="5,624,272,712">
 <area shape="rect" id="node7" href="core_payment.html" target="_top" title="core_payment" alt="" coords="1157,5,1400,181">
-<area shape="rect" id="node8" href="core_paymentschedule.html" target="_top" title="core_paymentschedule" alt="" coords="692,61,1113,600">
-<area shape="rect" id="node9" href="core_paymentmethoddetails.html" target="_top" title="core_paymentmethoddetails" alt="" coords="316,184,648,301">
-<area shape="rect" id="node10" href="core_rate.html" target="_top" title="core_rate" alt="" coords="368,629,596,747">
-<area shape="rect" id="node12" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="20,725,257,813">
-<area shape="rect" id="node11" href="core_price.html" target="_top" title="core_price" alt="" coords="1158,399,1399,521">
+<area shape="rect" id="node8" href="core_paymentschedule.html" target="_top" title="core_paymentschedule" alt="" coords="692,61,1113,629">
+<area shape="rect" id="node9" href="core_paymentmethoddetails.html" target="_top" title="core_paymentmethoddetails" alt="" coords="316,188,648,305">
+<area shape="rect" id="node10" href="core_rate.html" target="_top" title="core_rate" alt="" coords="368,633,596,751">
+<area shape="rect" id="node12" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="20,729,257,817">
+<area shape="rect" id="node11" href="core_price.html" target="_top" title="core_price" alt="" coords="1158,463,1399,585">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_paymentschedule.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
