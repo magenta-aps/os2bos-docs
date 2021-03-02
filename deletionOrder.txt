@@ -5,6 +5,7 @@ django_session
 django_migrations
 core_paymentdateexclusion
 core_internalpaymentrecipient
+core_accountaliasmapping
 constance_config
 django_admin_log
 core_user_user_permissions
@@ -37,6 +38,7 @@ core_rate
 core_schooldistrict
 core_paymentmethoddetails
 core_approvallevel
+core_activitycategory
 django_content_type
 core_serviceprovider
 core_effortstep

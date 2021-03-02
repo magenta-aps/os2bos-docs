@@ -6,7 +6,9 @@
       <sequence increment="1" name="auth_permission_id_seq" startValue="1"/>
       <sequence increment="1" name="constance_config_id_seq" startValue="1"/>
       <sequence increment="1" name="core_accountalias_id_seq" startValue="1"/>
+      <sequence increment="1" name="core_accountaliasmapping_id_seq" startValue="1"/>
       <sequence increment="1" name="core_activity_id_seq" startValue="1"/>
+      <sequence increment="1" name="core_activitycategory_id_seq" startValue="1"/>
       <sequence increment="1" name="core_activitydetails_id_seq" startValue="1"/>
       <sequence increment="1" name="core_activitydetails_main_activities_id_seq" startValue="1"/>
       <sequence increment="1" name="core_activitydetails_service_providers_id_seq" startValue="1"/>
@@ -89,7 +91,7 @@
             <column ascending="true" name="permission_id"/>
          </index>
       </table>
-      <table name="auth_permission" numRows="166" remarks="" schema="public" type="TABLE">
+      <table name="auth_permission" numRows="174" remarks="" schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('auth_permission_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
             <child column="permission_id" foreignKey="auth_group_permissio_permission_id_84c5c92e_fk_auth_perm" implied="false" onDeleteCascade="false" schema="public" table="auth_group_permissions"/>
             <child column="permission_id" foreignKey="core_user_user_permi_permission_id_35ccf601_fk_auth_perm" implied="false" onDeleteCascade="false" schema="public" table="core_user_user_permissions"/>
@@ -148,6 +150,20 @@
          <index name="unique_section_info_activity_details" unique="true">
             <column ascending="true" name="activity_details_id"/>
             <column ascending="true" name="section_info_id"/>
+         </index>
+      </table>
+      <table name="core_accountaliasmapping" numRows="204" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('core_accountaliasmapping_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="main_account_number" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="activity_number" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="alias" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="core_accountaliasmapping_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="unique_main_account_number_activity_number" unique="true">
+            <column ascending="true" name="main_account_number"/>
+            <column ascending="true" name="activity_number"/>
          </index>
       </table>
       <table name="core_activity" numRows="0" remarks="" schema="public" type="TABLE">
@@ -210,6 +226,18 @@
             <column ascending="true" name="appropriation_id"/>
          </index>
          <checkConstraint constraint="((start_date &lt;= end_date))" name="end_date_after_start_date"/>
+      </table>
+      <table name="core_activitycategory" numRows="25" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('core_activitycategory_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
+            <child column="activity_category_id" foreignKey="core_sectioninfo_activity_category_id_38181a5c_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_sectioninfo"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="category_id" nullable="false" remarks="" size="6" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="core_activitycategory_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
       </table>
       <table name="core_activitydetails" numRows="82" remarks="" schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('core_activitydetails_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
@@ -865,9 +893,15 @@
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="main_activity_main_account_number" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="supplementary_activity_main_account_number" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="activity_category_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
+            <parent column="id" foreignKey="core_sectioninfo_activity_category_id_38181a5c_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_activitycategory"/>
+         </column>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="core_sectioninfo_pkey" unique="true">
             <column ascending="true" name="id"/>
+         </index>
+         <index name="core_sectioninfo_activity_category_id_38181a5c" unique="false">
+            <column ascending="true" name="activity_category_id"/>
          </index>
          <index name="core_sectioninfo_activity_details_id_a7e1634e" unique="false">
             <column ascending="true" name="activity_details_id"/>
@@ -1047,7 +1081,7 @@
          </index>
          <checkConstraint constraint="((action_flag &gt;= 0))" name="django_admin_log_action_flag_check"/>
       </table>
-      <table name="django_content_type" numRows="42" remarks="" schema="public" type="TABLE">
+      <table name="django_content_type" numRows="44" remarks="" schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('django_content_type_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
             <child column="content_type_id" foreignKey="auth_permission_content_type_id_2f476e4b_fk_django_co" implied="false" onDeleteCascade="false" schema="public" table="auth_permission"/>
             <child column="content_type_id" foreignKey="django_admin_log_content_type_id_c4bce8eb_fk_django_co" implied="false" onDeleteCascade="false" schema="public" table="django_admin_log"/>
@@ -1063,7 +1097,7 @@
             <column ascending="true" name="model"/>
          </index>
       </table>
-      <table name="django_migrations" numRows="112" remarks="" schema="public" type="TABLE">
+      <table name="django_migrations" numRows="115" remarks="" schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('django_migrations_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="app" nullable="false" remarks="" size="255" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="name" nullable="false" remarks="" size="255" type="varchar" typeCode="12"/>

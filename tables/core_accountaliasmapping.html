@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>auth_permission - bev Database</title>
+        <title>core_accountaliasmapping - bev Database</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
@@ -73,7 +73,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>auth_permission</h1><p><span id="recordNumber">174</span> rows</p><br />
+                    <h1>core_accountaliasmapping</h1><p><span id="recordNumber">204</span> rows</p><br />
                 </section>
                 <!-- Main content -->
                 <section class="content">
@@ -108,17 +108,9 @@
                                     <td>10</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
-                                    <td>nextval(&#39;auth_permission_id_seq&#39;::regclass)</td>
+                                    <td>nextval(&#39;core_accountaliasmapping_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
-                                            <tr>
-                                                <td title="auth_group_permissions.permission_id references auth_permission.id via auth_group_permissio_permission_id_84c5c92e_fk_auth_perm"><a href='auth_group_permissions.html'>auth_group_permissions</a><span class='relatedKey'>.permission_id</span></td>
-                                                <td class="constraint detail">auth_group_permissio_permission_id_84c5c92e_fk_auth_perm<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td title="core_user_user_permissions.permission_id references auth_permission.id via core_user_user_permi_permission_id_35ccf601_fk_auth_perm"><a href='core_user_user_permissions.html'>core_user_user_permissions</a><span class='relatedKey'>.permission_id</span></td>
-                                                <td class="constraint detail">core_user_user_permi_permission_id_35ccf601_fk_auth_perm<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -128,9 +120,9 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="name">name</span></td>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="main_account_number">main_account_number</span></td>
                                     <td>varchar</td>
-                                    <td>255</td>
+                                    <td>128</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -145,9 +137,9 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="content_type_id">content_type_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="activity_number">activity_number</span></td>
+                                    <td>varchar</td>
+                                    <td>128</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -157,18 +149,14 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
-                                            <tr>
-                                                <td title="auth_permission.content_type_id references django_content_type.id via auth_permission_content_type_id_2f476e4b_fk_django_co"><a href='django_content_type.html'>django_content_type</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">auth_permission_content_type_id_2f476e4b_fk_django_co<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="codename">codename</span></td>
+                                    <td><span id="alias">alias</span></td>
                                     <td>varchar</td>
-                                    <td>100</td>
+                                    <td>128</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -207,68 +195,25 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> auth_permission_pkey</td>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> core_accountaliasmapping_pkey</td>
                                     <td>Primary key</td>
                                     <td><span title='Ascending'>Asc</span></td>
                                     <td>id</td>
                                 </tr>
                                 <tr>
-                                    <td title='Indexed'>auth_permission_content_type_id_2f476e4b</td>
-                                    <td>Performance</td>
-                                    <td><span title='Ascending'>Asc</span></td>
-                                    <td>content_type_id</td>
-                                </tr>
-                                <tr>
-                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> auth_permission_content_type_id_codename_01ab375a_uniq</td>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> unique_main_account_number_activity_number</td>
                                     <td>Must be unique</td>
                                     <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
-                                    <td>content_type_id + codename</td>
+                                    <td>main_account_number + activity_number</td>
                                 </tr>
                                 </tbody>
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <i class="fa fa-code-fork"></i>
-                            <h3 id="Relationships" class="box-title">Relationships</h3>
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                            </div>
-                        </div>
-                        <div class="box-body">
-                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
-                                <h5>Close relationships within degrees of separation</h5>
-                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
-                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
-                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
-                                </ul>
-                                <div class="tab-content no-padding">
-                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
-                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="auth_group_permissions.html" target="_top" title="auth_group_permissions" alt="" coords="687,5,985,157">
-<area shape="rect" id="node2" href="auth_permission.html" target="_top" title="auth_permission" alt="" coords="317,147,628,333">
-<area shape="rect" id="node3" href="django_content_type.html" target="_top" title="django_content_type" alt="" coords="5,208,273,360">
-<area shape="rect" id="node4" href="core_user_user_permissions.html" target="_top" title="core_user_user_permissions" alt="" coords="672,175,1000,327">
-</map>
-                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/auth_permission.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
-                                    </div>
-                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
-                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="auth_group_permissions.html" target="_top" title="auth_group_permissions" alt="" coords="687,5,985,157">
-<area shape="rect" id="node2" href="auth_group.html" target="_top" title="auth_group" alt="" coords="379,28,567,116">
-<area shape="rect" id="node3" href="auth_permission.html" target="_top" title="auth_permission" alt="" coords="317,133,628,320">
-<area shape="rect" id="node4" href="django_content_type.html" target="_top" title="django_content_type" alt="" coords="5,299,273,451">
-<area shape="rect" id="node5" href="core_user_user_permissions.html" target="_top" title="core_user_user_permissions" alt="" coords="672,184,1000,336">
-<area shape="rect" id="node6" href="core_user.html" target="_top" title="core_user" alt="" coords="387,337,559,425">
-<area shape="rect" id="node7" href="django_admin_log.html" target="_top" title="django_admin_log" alt="" coords="714,388,958,476">
-</map>
-                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/auth_permission.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.box-body -->
+                    <div class="alert alert-warning alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
+                        <p>No diagrams were produced please see application output for any errors</p>
                     </div>
                 </section>
                 <script>

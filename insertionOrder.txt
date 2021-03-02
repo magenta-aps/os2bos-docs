@@ -8,6 +8,7 @@ core_effort
 core_effortstep
 core_serviceprovider
 django_content_type
+core_activitycategory
 core_approvallevel
 core_paymentmethoddetails
 core_schooldistrict
@@ -40,6 +41,7 @@ core_user_groups
 core_user_user_permissions
 django_admin_log
 constance_config
+core_accountaliasmapping
 core_internalpaymentrecipient
 core_paymentdateexclusion
 django_migrations
