@@ -7,6 +7,7 @@ core_paymentdateexclusion
 core_internalpaymentrecipient
 core_accountaliasmapping
 constance_config
+core_sectioninfo
 django_admin_log
 core_user_user_permissions
 core_user_groups
@@ -19,14 +20,12 @@ core_case_efforts
 core_activitydetails_supplementary_activity_for
 core_activitydetails_service_providers
 core_activitydetails_main_activities
-core_accountalias
 auth_group_permissions
 core_relatedperson
 core_payment
 core_historicalrateperdate
 core_historicalpayment
 core_historicalcase
-core_sectioninfo
 core_paymentschedule
 auth_permission
 core_activity
