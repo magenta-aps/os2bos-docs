@@ -5,6 +5,7 @@ django_session
 django_migrations
 core_paymentdateexclusion
 core_internalpaymentrecipient
+core_dstpayload
 core_accountaliasmapping
 constance_config
 core_sectioninfo

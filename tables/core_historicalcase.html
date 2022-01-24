@@ -344,6 +344,23 @@
                                     </td>
                                     <td></td>
                                 </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="acting_municipality_id">acting_municipality_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -373,6 +390,12 @@
                                     <td>Primary key</td>
                                     <td><span title='Ascending'>Asc</span></td>
                                     <td>history_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>core_historicalcase_acting_municipality_id_28d597d4</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>acting_municipality_id</td>
                                 </tr>
                                 <tr>
                                     <td title='Indexed'>core_historicalcase_case_worker_id_12b18640</td>
@@ -447,7 +470,7 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_historicalcase.html" target="_top" title="core_historicalcase" alt="" coords="221,5,633,485">
+<area shape="rect" id="node1" href="core_historicalcase.html" target="_top" title="core_historicalcase" alt="" coords="221,5,633,515">
 <area shape="rect" id="node2" href="core_user.html" target="_top" title="core_user" alt="" coords="5,243,177,419">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/core_historicalcase.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
@@ -455,16 +478,16 @@
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
 <area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="554,5,753,93">
-<area shape="rect" id="node2" href="core_user.html" target="_top" title="core_user" alt="" coords="231,816,403,992">
-<area shape="rect" id="node8" href="core_team.html" target="_top" title="core_team" alt="" coords="9,848,187,936">
+<area shape="rect" id="node2" href="core_user.html" target="_top" title="core_user" alt="" coords="231,845,403,1021">
+<area shape="rect" id="node8" href="core_team.html" target="_top" title="core_team" alt="" coords="9,877,187,965">
 <area shape="rect" id="node3" href="core_case.html" target="_top" title="core_case" alt="" coords="567,111,740,199">
-<area shape="rect" id="node4" href="core_historicalcase.html" target="_top" title="core_historicalcase" alt="" coords="447,216,859,696">
-<area shape="rect" id="node5" href="core_historicalpayment.html" target="_top" title="core_historicalpayment" alt="" coords="509,713,797,801">
-<area shape="rect" id="node6" href="core_historicalrateperdate.html" target="_top" title="core_historicalrateperdate" alt="" coords="497,819,810,907">
-<area shape="rect" id="node7" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="535,924,771,1012">
-<area shape="rect" id="node9" href="core_user_groups.html" target="_top" title="core_user_groups" alt="" coords="533,1029,773,1117">
-<area shape="rect" id="node10" href="core_user_user_permissions.html" target="_top" title="core_user_user_permissions" alt="" coords="489,1135,817,1223">
-<area shape="rect" id="node11" href="django_admin_log.html" target="_top" title="django_admin_log" alt="" coords="531,1240,775,1328">
+<area shape="rect" id="node4" href="core_historicalcase.html" target="_top" title="core_historicalcase" alt="" coords="447,216,859,725">
+<area shape="rect" id="node5" href="core_historicalpayment.html" target="_top" title="core_historicalpayment" alt="" coords="509,743,797,831">
+<area shape="rect" id="node6" href="core_historicalrateperdate.html" target="_top" title="core_historicalrateperdate" alt="" coords="497,848,810,936">
+<area shape="rect" id="node7" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="535,953,771,1041">
+<area shape="rect" id="node9" href="core_user_groups.html" target="_top" title="core_user_groups" alt="" coords="533,1059,773,1147">
+<area shape="rect" id="node10" href="core_user_user_permissions.html" target="_top" title="core_user_user_permissions" alt="" coords="489,1164,817,1252">
+<area shape="rect" id="node11" href="django_admin_log.html" target="_top" title="django_admin_log" alt="" coords="531,1269,775,1357">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_historicalcase.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>

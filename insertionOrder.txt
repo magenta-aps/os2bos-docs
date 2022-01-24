@@ -41,6 +41,7 @@ django_admin_log
 core_sectioninfo
 constance_config
 core_accountaliasmapping
+core_dstpayload
 core_internalpaymentrecipient
 core_paymentdateexclusion
 django_migrations

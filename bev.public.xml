@@ -16,6 +16,7 @@
       <sequence increment="1" name="core_approvallevel_id_seq" startValue="1"/>
       <sequence increment="1" name="core_case_efforts_id_seq" startValue="1"/>
       <sequence increment="1" name="core_case_id_seq" startValue="1"/>
+      <sequence increment="1" name="core_dstpayload_id_seq" startValue="1"/>
       <sequence increment="1" name="core_effort_allowed_for_target_groups_id_seq" startValue="1"/>
       <sequence increment="1" name="core_effort_id_seq" startValue="1"/>
       <sequence increment="1" name="core_effortstep_id_seq" startValue="1"/>
@@ -90,7 +91,7 @@
             <column ascending="true" name="permission_id"/>
          </index>
       </table>
-      <table name="auth_permission" numRows="170" remarks="" schema="public" type="TABLE">
+      <table name="auth_permission" numRows="174" remarks="" schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('auth_permission_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
             <child column="permission_id" foreignKey="auth_group_permissio_permission_id_84c5c92e_fk_auth_perm" implied="false" onDeleteCascade="false" schema="public" table="auth_group_permissions"/>
             <child column="permission_id" foreignKey="core_user_user_permi_permission_id_35ccf601_fk_auth_perm" implied="false" onDeleteCascade="false" schema="public" table="core_user_user_permissions"/>
@@ -448,6 +449,19 @@
             <column ascending="true" name="effort_id"/>
          </index>
       </table>
+      <table name="core_dstpayload" numRows="0" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('core_dstpayload_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="content" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="from_date" nullable="true" remarks="" size="13" type="date" typeCode="91"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="4" name="date" nullable="false" remarks="" size="35" type="timestamptz" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="dst_type" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="to_date" nullable="true" remarks="" size="13" type="date" typeCode="91"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="core_dstpayload_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
       <table name="core_effort" numRows="2" remarks="" schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('core_effort_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
             <child column="effort_id" foreignKey="core_case_efforts_effort_id_7fcaf9f8_fk_core_effort_id" implied="false" onDeleteCascade="false" schema="public" table="core_case_efforts"/>
@@ -518,9 +532,13 @@
          <column autoUpdated="false" defaultValue="null" digits="6" id="11" name="modified" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="user_created" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="user_modified" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="14" name="acting_municipality_id" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
          <primaryKey column="history_id" sequenceNumberInPK="1"/>
          <index name="core_historicalcase_pkey" unique="true">
             <column ascending="true" name="history_id"/>
+         </index>
+         <index name="core_historicalcase_acting_municipality_id_28d597d4" unique="false">
+            <column ascending="true" name="acting_municipality_id"/>
          </index>
          <index name="core_historicalcase_case_worker_id_12b18640" unique="false">
             <column ascending="true" name="case_worker_id"/>
@@ -804,6 +822,9 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="text" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="law_text_name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="dst_code" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="dst_handicap" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="dst_preventative_measures" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="core_section_pkey" unique="true">
             <column ascending="true" name="id"/>
@@ -1070,7 +1091,7 @@
          </index>
          <checkConstraint constraint="((action_flag &gt;= 0))" name="django_admin_log_action_flag_check"/>
       </table>
-      <table name="django_content_type" numRows="43" remarks="" schema="public" type="TABLE">
+      <table name="django_content_type" numRows="44" remarks="" schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('django_content_type_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
             <child column="content_type_id" foreignKey="auth_permission_content_type_id_2f476e4b_fk_django_co" implied="false" onDeleteCascade="false" schema="public" table="auth_permission"/>
             <child column="content_type_id" foreignKey="django_admin_log_content_type_id_c4bce8eb_fk_django_co" implied="false" onDeleteCascade="false" schema="public" table="django_admin_log"/>
@@ -1086,7 +1107,7 @@
             <column ascending="true" name="model"/>
          </index>
       </table>
-      <table name="django_migrations" numRows="120" remarks="" schema="public" type="TABLE">
+      <table name="django_migrations" numRows="127" remarks="" schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('django_migrations_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="app" nullable="false" remarks="" size="255" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="name" nullable="false" remarks="" size="255" type="varchar" typeCode="12"/>
