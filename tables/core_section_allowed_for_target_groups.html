@@ -104,8 +104,8 @@
                                 <tbody>
                                 <tr>
                                     <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-                                    <td>serial</td>
-                                    <td>10</td>
+                                    <td>bigserial</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
                                     <td>nextval(&#39;core_section_allowed_for_target_groups_id_seq&#39;::regclass)</td>
@@ -120,9 +120,9 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="section_id">section_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="section_id">section_id</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -132,18 +132,14 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
-                                            <tr>
-                                                <td title="core_section_allowed_for_target_groups.section_id references core_section.id via core_section_allowed_section_id_ab7a9a43_fk_core_sect"><a href='core_section.html'>core_section</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_section_allowed_section_id_ab7a9a43_fk_core_sect<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="targetgroup_id">targetgroup_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="targetgroup_id">targetgroup_id</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -153,10 +149,6 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
-                                            <tr>
-                                                <td title="core_section_allowed_for_target_groups.targetgroup_id references core_targetgroup.id via core_section_allowed_targetgroup_id_fe481df7_fk_core_targ"><a href='core_targetgroup.html'>core_targetgroup</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_section_allowed_targetgroup_id_fe481df7_fk_core_targ<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -213,48 +205,10 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <i class="fa fa-code-fork"></i>
-                            <h3 id="Relationships" class="box-title">Relationships</h3>
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                            </div>
-                        </div>
-                        <div class="box-body">
-                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
-                                <h5>Close relationships within degrees of separation</h5>
-                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
-                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
-                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
-                                </ul>
-                                <div class="tab-content no-padding">
-                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
-                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_section_allowed_for_target_groups.html" target="_top" title="core_section_allowed_for_target_groups" alt="" coords="345,27,840,184">
-<area shape="rect" id="node2" href="core_section.html" target="_top" title="core_section" alt="" coords="5,5,301,123">
-<area shape="rect" id="node3" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="20,140,287,257">
-</map>
-                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/core_section_allowed_for_target_groups.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
-                                    </div>
-                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
-                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_activitydetails_supplementary_activity_for.html" target="_top" title="core_activitydetails_supplementary_activity_for" alt="" coords="773,5,1268,93">
-<area shape="rect" id="node2" href="core_section.html" target="_top" title="core_section" alt="" coords="375,187,671,304">
-<area shape="rect" id="node3" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="895,321,1146,409">
-<area shape="rect" id="node4" href="core_case.html" target="_top" title="core_case" alt="" coords="436,321,609,409">
-<area shape="rect" id="node5" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="5,424,272,541">
-<area shape="rect" id="node6" href="core_effort_allowed_for_target_groups.html" target="_top" title="core_effort_allowed_for_target_groups" alt="" coords="316,427,729,515">
-<area shape="rect" id="node7" href="core_section_allowed_for_steps.html" target="_top" title="core_section_allowed_for_steps" alt="" coords="843,111,1199,199">
-<area shape="rect" id="node8" href="core_section_allowed_for_target_groups.html" target="_top" title="core_section_allowed_for_target_groups" alt="" coords="773,429,1268,587">
-<area shape="rect" id="node9" href="core_sectioninfo.html" target="_top" title="core_sectioninfo" alt="" coords="906,216,1135,304">
-</map>
-                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_section_allowed_for_target_groups.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.box-body -->
+                    <div class="alert alert-warning alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
+                        <p>No diagrams were produced please see application output for any errors</p>
                     </div>
                 </section>
                 <script>

@@ -69,7 +69,7 @@
          </index>
       </table>
       <table name="auth_group_permissions" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('auth_group_permissions_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="true" defaultValue="nextval('auth_group_permissions_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="group_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
             <parent column="id" foreignKey="auth_group_permissions_group_id_b120cbf9_fk_auth_group_id" implied="false" onDeleteCascade="false" schema="public" table="auth_group"/>
          </column>
@@ -129,7 +129,7 @@
          </index>
       </table>
       <table name="core_accountaliasmapping" numRows="204" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_accountaliasmapping_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="true" defaultValue="nextval('core_accountaliasmapping_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="main_account_number" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="activity_number" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="alias" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
@@ -143,9 +143,9 @@
          </index>
       </table>
       <table name="core_activity" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_activity_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="modifies_id" foreignKey="core_activity_modifies_id_a1e0d9e4_fk_core_activity_id" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
-            <child column="activity_id" foreignKey="core_paymentschedule_activity_id_57e6b4d5_fk_core_activity_id" implied="false" onDeleteCascade="false" schema="public" table="core_paymentschedule"/>
+         <column autoUpdated="true" defaultValue="nextval('core_activity_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="modifies_id" foreignKey="core_activity_modifies_id_a1e0d9e4_fk" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
+            <child column="activity_id" foreignKey="core_paymentschedule_activity_id_57e6b4d5_fk" implied="false" onDeleteCascade="false" schema="public" table="core_paymentschedule"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="status" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="approval_note" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
@@ -154,23 +154,23 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="end_date" nullable="true" remarks="" size="13" type="date" typeCode="91"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="activity_type" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="note" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="appropriation_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_activity_appropriation_id_86d3c658_fk_core_appr" implied="false" onDeleteCascade="false" schema="public" table="core_appropriation"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="appropriation_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_activity_appropriation_id_86d3c658_fk" implied="false" onDeleteCascade="false" schema="public" table="core_appropriation"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="approval_level_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_activity_approval_level_id_9de774af_fk_core_appr" implied="false" onDeleteCascade="false" schema="public" table="core_approvallevel"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="approval_level_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_activity_approval_level_id_9de774af_fk" implied="false" onDeleteCascade="false" schema="public" table="core_approvallevel"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="approval_user_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_activity_approval_user_id_98590644_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="approval_user_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_activity_approval_user_id_98590644_fk" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="details_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_activity_details_id_42046971_fk_core_activitydetails_id" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="details_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_activity_details_id_42046971_fk" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="modifies_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_activity_modifies_id_a1e0d9e4_fk_core_activity_id" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="modifies_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_activity_modifies_id_a1e0d9e4_fk" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="service_provider_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_activity_service_provider_id_25faf8a7_fk_core_serv" implied="false" onDeleteCascade="false" schema="public" table="core_serviceprovider"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="service_provider_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_activity_service_provider_id_25faf8a7_fk" implied="false" onDeleteCascade="false" schema="public" table="core_serviceprovider"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="6" id="14" name="created" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="15" name="modified" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
@@ -192,7 +192,7 @@
          <index name="core_activity_details_id_42046971" unique="false">
             <column ascending="true" name="details_id"/>
          </index>
-         <index name="core_activity_modifies_id_a1e0d9e4" unique="false">
+         <index name="core_activity_modifies_id_a1e0d9e4_uniq" unique="true">
             <column ascending="true" name="modifies_id"/>
          </index>
          <index name="core_activity_service_provider_id_25faf8a7" unique="false">
@@ -204,8 +204,8 @@
          <checkConstraint constraint="((start_date &lt;= end_date))" name="end_date_after_start_date"/>
       </table>
       <table name="core_activitycategory" numRows="25" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_activitycategory_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="activity_category_id" foreignKey="core_sectioninfo_activity_category_id_38181a5c_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_sectioninfo"/>
+         <column autoUpdated="true" defaultValue="nextval('core_activitycategory_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="activity_category_id" foreignKey="core_sectioninfo_activity_category_id_38181a5c_fk" implied="false" onDeleteCascade="false" schema="public" table="core_sectioninfo"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="category_id" nullable="false" remarks="" size="6" type="varchar" typeCode="12"/>
@@ -216,13 +216,9 @@
          </index>
       </table>
       <table name="core_activitydetails" numRows="82" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_activitydetails_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="details_id" foreignKey="core_activity_details_id_42046971_fk_core_activitydetails_id" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
-            <child column="from_activitydetails_id" foreignKey="core_activitydetails_from_activitydetails_1b4a7b20_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails_main_activities"/>
-            <child column="to_activitydetails_id" foreignKey="core_activitydetails_to_activitydetails_i_42e6f49c_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails_main_activities"/>
-            <child column="activitydetails_id" foreignKey="core_activitydetails_activitydetails_id_92e587e8_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails_service_providers"/>
-            <child column="activitydetails_id" foreignKey="core_activitydetails_activitydetails_id_033f6a2e_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails_supplementary_activity_for"/>
-            <child column="activity_details_id" foreignKey="core_sectioninfo_activity_details_id_a7e1634e_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_sectioninfo"/>
+         <column autoUpdated="true" defaultValue="nextval('core_activitydetails_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="details_id" foreignKey="core_activity_details_id_42046971_fk" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
+            <child column="activity_details_id" foreignKey="core_sectioninfo_activity_details_id_a7e1634e_fk" implied="false" onDeleteCascade="false" schema="public" table="core_sectioninfo"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="activity_id" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
@@ -244,13 +240,9 @@
          <checkConstraint constraint="((max_tolerance_in_percent &gt;= 0))" name="core_activitydetails_max_tolerance_in_percent_check"/>
       </table>
       <table name="core_activitydetails_main_activities" numRows="241" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_activitydetails_main_activities_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="from_activitydetails_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_activitydetails_from_activitydetails_1b4a7b20_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="to_activitydetails_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_activitydetails_to_activitydetails_i_42e6f49c_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails"/>
-         </column>
+         <column autoUpdated="true" defaultValue="nextval('core_activitydetails_main_activities_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="from_activitydetails_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="to_activitydetails_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="core_activitydetails_main_activities_pkey" unique="true">
             <column ascending="true" name="id"/>
@@ -267,13 +259,9 @@
          </index>
       </table>
       <table name="core_activitydetails_service_providers" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_activitydetails_service_providers_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="activitydetails_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_activitydetails_activitydetails_id_92e587e8_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="serviceprovider_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_activitydetails_serviceprovider_id_7dae5962_fk_core_serv" implied="false" onDeleteCascade="false" schema="public" table="core_serviceprovider"/>
-         </column>
+         <column autoUpdated="true" defaultValue="nextval('core_activitydetails_service_providers_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="activitydetails_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="serviceprovider_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="core_activitydetails_service_providers_pkey" unique="true">
             <column ascending="true" name="id"/>
@@ -290,13 +278,9 @@
          </index>
       </table>
       <table name="core_activitydetails_supplementary_activity_for" numRows="203" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_activitydetails_supplementary_activity_for_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="activitydetails_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_activitydetails_activitydetails_id_033f6a2e_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="section_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_activitydetails_section_id_0ad89683_fk_core_sect" implied="false" onDeleteCascade="false" schema="public" table="core_section"/>
-         </column>
+         <column autoUpdated="true" defaultValue="nextval('core_activitydetails_supplementary_activity_for_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="activitydetails_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="section_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="core_activitydetails_supplementary_activity_for_pkey" unique="true">
             <column ascending="true" name="id"/>
@@ -313,16 +297,16 @@
          </index>
       </table>
       <table name="core_appropriation" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_appropriation_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="appropriation_id" foreignKey="core_activity_appropriation_id_86d3c658_fk_core_appr" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
+         <column autoUpdated="true" defaultValue="nextval('core_appropriation_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="appropriation_id" foreignKey="core_activity_appropriation_id_86d3c658_fk" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="sbsys_id" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="note" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="case_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_appropriation_case_id_69f8b199_fk_core_case_id" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="case_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_appropriation_case_id_69f8b199_fk" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="section_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_appropriation_section_id_dac1575b_fk_core_section_id" implied="false" onDeleteCascade="false" schema="public" table="core_section"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="section_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_appropriation_section_id_dac1575b_fk" implied="false" onDeleteCascade="false" schema="public" table="core_section"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="6" id="5" name="created" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="6" name="modified" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
@@ -346,8 +330,8 @@
          </index>
       </table>
       <table name="core_approvallevel" numRows="6" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_approvallevel_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="approval_level_id" foreignKey="core_activity_approval_level_id_9de774af_fk_core_appr" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
+         <column autoUpdated="true" defaultValue="nextval('core_approvallevel_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="approval_level_id" foreignKey="core_activity_approval_level_id_9de774af_fk" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
@@ -357,10 +341,9 @@
          </index>
       </table>
       <table name="core_case" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_case_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="case_id" foreignKey="core_appropriation_case_id_69f8b199_fk_core_case_id" implied="false" onDeleteCascade="false" schema="public" table="core_appropriation"/>
-            <child column="case_id" foreignKey="core_case_efforts_case_id_e0f4d85e_fk_core_case_id" implied="false" onDeleteCascade="false" schema="public" table="core_case_efforts"/>
-            <child column="main_case_id" foreignKey="core_relatedperson_main_case_id_f0d129a9_fk_core_case_id" implied="false" onDeleteCascade="false" schema="public" table="core_relatedperson"/>
+         <column autoUpdated="true" defaultValue="nextval('core_case_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="case_id" foreignKey="core_appropriation_case_id_69f8b199_fk" implied="false" onDeleteCascade="false" schema="public" table="core_appropriation"/>
+            <child column="main_case_id" foreignKey="core_relatedperson_main_case_id_f0d129a9_fk" implied="false" onDeleteCascade="false" schema="public" table="core_relatedperson"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="sbsys_id" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="cpr_number" nullable="false" remarks="" size="10" type="varchar" typeCode="12"/>
@@ -368,26 +351,26 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="scaling_step" nullable="true" remarks="" size="5" type="int2" typeCode="5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="assessment_comment" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="note" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="acting_municipality_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_case_acting_municipality__90f8e17b_fk_core_muni" implied="false" onDeleteCascade="false" schema="public" table="core_municipality"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="acting_municipality_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_case_acting_municipality_id_90f8e17b_fk" implied="false" onDeleteCascade="false" schema="public" table="core_municipality"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="case_worker_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_case_case_worker_id_9326dffa_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="case_worker_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_case_case_worker_id_9326dffa_fk" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="district_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_case_district_id_2d51464f_fk_core_schooldistrict_id" implied="false" onDeleteCascade="false" schema="public" table="core_schooldistrict"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="district_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_case_district_id_2d51464f_fk" implied="false" onDeleteCascade="false" schema="public" table="core_schooldistrict"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="paying_municipality_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_case_paying_municipality__54fadff6_fk_core_muni" implied="false" onDeleteCascade="false" schema="public" table="core_municipality"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="paying_municipality_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_case_paying_municipality_id_54fadff6_fk" implied="false" onDeleteCascade="false" schema="public" table="core_municipality"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="residence_municipality_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_case_residence_municipali_97f4496a_fk_core_muni" implied="false" onDeleteCascade="false" schema="public" table="core_municipality"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="residence_municipality_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_case_residence_municipality_id_97f4496a_fk" implied="false" onDeleteCascade="false" schema="public" table="core_municipality"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="effort_step_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_case_effort_step_id_64ae08a0_fk_core_effortstep_id" implied="false" onDeleteCascade="false" schema="public" table="core_effortstep"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="effort_step_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_case_effort_step_id_64ae08a0_fk" implied="false" onDeleteCascade="false" schema="public" table="core_effortstep"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="target_group_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_case_target_group_id_1ffe0068_fk_core_targetgroup_id" implied="false" onDeleteCascade="false" schema="public" table="core_targetgroup"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="target_group_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_case_target_group_id_1ffe0068_fk" implied="false" onDeleteCascade="false" schema="public" table="core_targetgroup"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="6" id="14" name="created" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="15" name="modified" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
@@ -427,13 +410,9 @@
          <checkConstraint constraint="((scaling_step &gt;= 0))" name="core_case_scaling_step_check"/>
       </table>
       <table name="core_case_efforts" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_case_efforts_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="case_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_case_efforts_case_id_e0f4d85e_fk_core_case_id" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="effort_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_case_efforts_effort_id_7fcaf9f8_fk_core_effort_id" implied="false" onDeleteCascade="false" schema="public" table="core_effort"/>
-         </column>
+         <column autoUpdated="true" defaultValue="nextval('core_case_efforts_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="case_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="effort_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="core_case_efforts_pkey" unique="true">
             <column ascending="true" name="id"/>
@@ -450,7 +429,7 @@
          </index>
       </table>
       <table name="core_dstpayload" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_dstpayload_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="true" defaultValue="nextval('core_dstpayload_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="content" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="from_date" nullable="true" remarks="" size="13" type="date" typeCode="91"/>
@@ -463,10 +442,7 @@
          </index>
       </table>
       <table name="core_effort" numRows="2" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_effort_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="effort_id" foreignKey="core_case_efforts_effort_id_7fcaf9f8_fk_core_effort_id" implied="false" onDeleteCascade="false" schema="public" table="core_case_efforts"/>
-            <child column="effort_id" foreignKey="core_effort_allowed__effort_id_abb685e9_fk_core_effo" implied="false" onDeleteCascade="false" schema="public" table="core_effort_allowed_for_target_groups"/>
-         </column>
+         <column autoUpdated="true" defaultValue="nextval('core_effort_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="description" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
@@ -476,13 +452,9 @@
          </index>
       </table>
       <table name="core_effort_allowed_for_target_groups" numRows="4" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_effort_allowed_for_target_groups_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="effort_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_effort_allowed__effort_id_abb685e9_fk_core_effo" implied="false" onDeleteCascade="false" schema="public" table="core_effort"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="targetgroup_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_effort_allowed__targetgroup_id_d58deb6e_fk_core_targ" implied="false" onDeleteCascade="false" schema="public" table="core_targetgroup"/>
-         </column>
+         <column autoUpdated="true" defaultValue="nextval('core_effort_allowed_for_target_groups_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="effort_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="targetgroup_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="core_effort_allowed_for_target_groups_pkey" unique="true">
             <column ascending="true" name="id"/>
@@ -499,9 +471,8 @@
          </index>
       </table>
       <table name="core_effortstep" numRows="6" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_effortstep_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="effort_step_id" foreignKey="core_case_effort_step_id_64ae08a0_fk_core_effortstep_id" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
-            <child column="effortstep_id" foreignKey="core_section_allowed_effortstep_id_d3b9ac71_fk_core_effo" implied="false" onDeleteCascade="false" schema="public" table="core_section_allowed_for_steps"/>
+         <column autoUpdated="true" defaultValue="nextval('core_effortstep_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="effort_step_id" foreignKey="core_case_effort_step_id_64ae08a0_fk" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="number" nullable="false" remarks="" size="10" type="int4" typeCode="4"/>
@@ -516,23 +487,21 @@
          <checkConstraint constraint="((number &gt;= 0))" name="core_effortstep_number_check"/>
       </table>
       <table name="core_historicalcase" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="int4" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="scaling_step" nullable="true" remarks="" size="5" type="int2" typeCode="5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="assessment_comment" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
          <column autoUpdated="true" defaultValue="nextval('core_historicalcase_history_id_seq'::regclass)" digits="0" id="3" name="history_id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="4" name="history_date" nullable="false" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="history_change_reason" nullable="true" remarks="" size="100" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="history_type" nullable="false" remarks="" size="1" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="case_worker_id" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="history_user_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_historicalcase_history_user_id_601d37c5_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="effort_step_id" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="case_worker_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="history_user_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="effort_step_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="10" name="created" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="11" name="modified" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="user_created" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="user_modified" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="14" name="acting_municipality_id" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="14" name="acting_municipality_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5"/>
          <primaryKey column="history_id" sequenceNumberInPK="1"/>
          <index name="core_historicalcase_pkey" unique="true">
             <column ascending="true" name="history_id"/>
@@ -555,7 +524,7 @@
          <checkConstraint constraint="((scaling_step &gt;= 0))" name="core_historicalcase_scaling_step_check"/>
       </table>
       <table name="core_historicalpayment" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="int4" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="2" id="1" name="paid_amount" nullable="true" remarks="" size="14" type="numeric" typeCode="2"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="paid" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="paid_date" nullable="true" remarks="" size="13" type="date" typeCode="91"/>
@@ -563,9 +532,7 @@
          <column autoUpdated="false" defaultValue="null" digits="6" id="5" name="history_date" nullable="false" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="history_change_reason" nullable="true" remarks="" size="100" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="history_type" nullable="false" remarks="" size="1" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="history_user_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_historicalpayment_history_user_id_ef303773_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
-         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="history_user_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="saved_account_alias" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <primaryKey column="history_id" sequenceNumberInPK="1"/>
          <index name="core_historicalpayment_pkey" unique="true">
@@ -579,7 +546,7 @@
          </index>
       </table>
       <table name="core_historicalrateperdate" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="int4" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="2" id="1" name="rate" nullable="false" remarks="" size="14" type="numeric" typeCode="2"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="start_date" nullable="true" remarks="" size="13" type="date" typeCode="91"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="end_date" nullable="true" remarks="" size="13" type="date" typeCode="91"/>
@@ -587,11 +554,9 @@
          <column autoUpdated="false" defaultValue="null" digits="6" id="5" name="history_date" nullable="false" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="history_change_reason" nullable="true" remarks="" size="100" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="history_type" nullable="false" remarks="" size="1" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="history_user_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_historicalratep_history_user_id_4eac7eec_fk_core_user" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="main_rate_id" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="changed_by_id" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="history_user_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="main_rate_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="changed_by_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="11" name="changed_date" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <primaryKey column="history_id" sequenceNumberInPK="1"/>
          <index name="core_historicalrateperdate_pkey" unique="true">
@@ -611,7 +576,7 @@
          </index>
       </table>
       <table name="core_internalpaymentrecipient" numRows="2" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_internalpaymentrecipient_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="true" defaultValue="nextval('core_internalpaymentrecipient_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
@@ -620,10 +585,10 @@
          </index>
       </table>
       <table name="core_municipality" numRows="98" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_municipality_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="acting_municipality_id" foreignKey="core_case_acting_municipality__90f8e17b_fk_core_muni" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
-            <child column="paying_municipality_id" foreignKey="core_case_paying_municipality__54fadff6_fk_core_muni" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
-            <child column="residence_municipality_id" foreignKey="core_case_residence_municipali_97f4496a_fk_core_muni" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
+         <column autoUpdated="true" defaultValue="nextval('core_municipality_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="acting_municipality_id" foreignKey="core_case_acting_municipality_id_90f8e17b_fk" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
+            <child column="paying_municipality_id" foreignKey="core_case_paying_municipality_id_54fadff6_fk" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
+            <child column="residence_municipality_id" foreignKey="core_case_residence_municipality_id_97f4496a_fk" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
@@ -633,7 +598,7 @@
          </index>
       </table>
       <table name="core_payment" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_payment_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="true" defaultValue="nextval('core_payment_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="date" nullable="false" remarks="" size="13" type="date" typeCode="91"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="recipient_type" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="recipient_id" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
@@ -641,8 +606,8 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="payment_method" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="2" id="6" name="amount" nullable="false" remarks="" size="14" type="numeric" typeCode="2"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="paid" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="payment_schedule_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_payment_payment_schedule_id_8a332af5_fk_core_paym" implied="false" onDeleteCascade="false" schema="public" table="core_paymentschedule"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="payment_schedule_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_payment_payment_schedule_id_8a332af5_fk" implied="false" onDeleteCascade="false" schema="public" table="core_paymentschedule"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="2" id="9" name="paid_amount" nullable="true" remarks="" size="14" type="numeric" typeCode="2"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="paid_date" nullable="true" remarks="" size="13" type="date" typeCode="91"/>
@@ -662,7 +627,7 @@
          </index>
       </table>
       <table name="core_paymentdateexclusion" numRows="341" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_paymentdateexclusion_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="true" defaultValue="nextval('core_paymentdateexclusion_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="date" nullable="false" remarks="" size="13" type="date" typeCode="91"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="core_paymentdateexclusion_pkey" unique="true">
@@ -673,8 +638,8 @@
          </index>
       </table>
       <table name="core_paymentmethoddetails" numRows="2" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_paymentmethoddetails_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="payment_method_details_id" foreignKey="core_paymentschedule_payment_method_detai_cf32fea5_fk_core_paym" implied="false" onDeleteCascade="false" schema="public" table="core_paymentschedule"/>
+         <column autoUpdated="true" defaultValue="nextval('core_paymentmethoddetails_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="payment_method_details_id" foreignKey="core_paymentschedule_payment_method_details_id_cf32fea5_fk" implied="false" onDeleteCascade="false" schema="public" table="core_paymentschedule"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="tax_card" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
@@ -684,9 +649,9 @@
          </index>
       </table>
       <table name="core_paymentschedule" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_paymentschedule_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="payment_schedule_id" foreignKey="core_payment_payment_schedule_id_8a332af5_fk_core_paym" implied="false" onDeleteCascade="false" schema="public" table="core_payment"/>
-            <child column="payment_schedule_id" foreignKey="core_price_payment_schedule_id_eccd2c3f_fk_core_paym" implied="false" onDeleteCascade="false" schema="public" table="core_price"/>
+         <column autoUpdated="true" defaultValue="nextval('core_paymentschedule_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="payment_schedule_id" foreignKey="core_payment_payment_schedule_id_8a332af5_fk" implied="false" onDeleteCascade="false" schema="public" table="core_payment"/>
+            <child column="payment_schedule_id" foreignKey="core_price_payment_schedule_id_eccd2c3f_fk" implied="false" onDeleteCascade="false" schema="public" table="core_price"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="recipient_type" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="recipient_id" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
@@ -697,13 +662,13 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="payment_type" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="2" id="8" name="payment_units" nullable="true" remarks="" size="14" type="numeric" typeCode="2"/>
          <column autoUpdated="false" defaultValue="null" digits="2" id="9" name="payment_amount" nullable="true" remarks="" size="14" type="numeric" typeCode="2"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="payment_method_details_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_paymentschedule_payment_method_detai_cf32fea5_fk_core_paym" implied="false" onDeleteCascade="false" schema="public" table="core_paymentmethoddetails"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="payment_method_details_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_paymentschedule_payment_method_details_id_cf32fea5_fk" implied="false" onDeleteCascade="false" schema="public" table="core_paymentmethoddetails"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="payment_id" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="fictive" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="activity_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_paymentschedule_activity_id_57e6b4d5_fk_core_activity_id" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="activity_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_paymentschedule_activity_id_57e6b4d5_fk" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="14" name="payment_cost_type" nullable="true" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="15" name="payment_rate_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
@@ -726,11 +691,11 @@
          <checkConstraint constraint="((payment_id &gt;= 0))" name="core_paymentschedule_payment_id_check"/>
       </table>
       <table name="core_price" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="variablerate_ptr_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_price_variablerate_ptr_id_91a1b913_fk_core_variablerate_id" implied="false" onDeleteCascade="false" schema="public" table="core_variablerate"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="variablerate_ptr_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_price_variablerate_ptr_id_91a1b913_fk" implied="false" onDeleteCascade="false" schema="public" table="core_variablerate"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="payment_schedule_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_price_payment_schedule_id_eccd2c3f_fk_core_paym" implied="false" onDeleteCascade="false" schema="public" table="core_paymentschedule"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="payment_schedule_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_price_payment_schedule_id_eccd2c3f_fk" implied="false" onDeleteCascade="false" schema="public" table="core_paymentschedule"/>
          </column>
          <primaryKey column="variablerate_ptr_id" sequenceNumberInPK="1"/>
          <index name="core_price_pkey" unique="true">
@@ -741,9 +706,9 @@
          </index>
       </table>
       <table name="core_rate" numRows="30" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="variablerate_ptr_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="variablerate_ptr_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
             <child column="payment_rate_id" foreignKey="core_paymentschedule_payment_rate_id_2e6d7529_fk_core_rate" implied="false" onDeleteCascade="false" schema="public" table="core_paymentschedule"/>
-            <parent column="id" foreignKey="core_rate_variablerate_ptr_id_fa8611d0_fk_core_variablerate_id" implied="false" onDeleteCascade="false" schema="public" table="core_variablerate"/>
+            <parent column="id" foreignKey="core_rate_variablerate_ptr_id_fa8611d0_fk" implied="false" onDeleteCascade="false" schema="public" table="core_variablerate"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="description" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
@@ -755,15 +720,15 @@
          </index>
       </table>
       <table name="core_rateperdate" numRows="30" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_rateperdate_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="true" defaultValue="nextval('core_rateperdate_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="2" id="1" name="rate" nullable="false" remarks="" size="14" type="numeric" typeCode="2"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="start_date" nullable="true" remarks="" size="13" type="date" typeCode="91"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="end_date" nullable="true" remarks="" size="13" type="date" typeCode="91"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="main_rate_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_rateperdate_main_rate_id_a786f60a_fk_core_variablerate_id" implied="false" onDeleteCascade="false" schema="public" table="core_variablerate"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="main_rate_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_rateperdate_main_rate_id_a786f60a_fk" implied="false" onDeleteCascade="false" schema="public" table="core_variablerate"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="changed_by_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_rateperdate_changed_by_id_8058f55c_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="changed_by_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_rateperdate_changed_by_id_8058f55c_fk" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="6" id="6" name="changed_date" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
@@ -778,13 +743,13 @@
          </index>
       </table>
       <table name="core_relatedperson" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_relatedperson_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="true" defaultValue="nextval('core_relatedperson_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="relation_type" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="cpr_number" nullable="false" remarks="" size="10" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="related_case" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="main_case_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_relatedperson_main_case_id_f0d129a9_fk_core_case_id" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="main_case_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_relatedperson_main_case_id_f0d129a9_fk" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="from_serviceplatformen" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="7" name="created" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
@@ -800,8 +765,8 @@
          </index>
       </table>
       <table name="core_schooldistrict" numRows="5" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_schooldistrict_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="district_id" foreignKey="core_case_district_id_2d51464f_fk_core_schooldistrict_id" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
+         <column autoUpdated="true" defaultValue="nextval('core_schooldistrict_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="district_id" foreignKey="core_case_district_id_2d51464f_fk" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
@@ -811,12 +776,9 @@
          </index>
       </table>
       <table name="core_section" numRows="146" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_section_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="section_id" foreignKey="core_activitydetails_section_id_0ad89683_fk_core_sect" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails_supplementary_activity_for"/>
-            <child column="section_id" foreignKey="core_appropriation_section_id_dac1575b_fk_core_section_id" implied="false" onDeleteCascade="false" schema="public" table="core_appropriation"/>
-            <child column="section_id" foreignKey="core_section_allowed_section_id_7445c299_fk_core_sect" implied="false" onDeleteCascade="false" schema="public" table="core_section_allowed_for_steps"/>
-            <child column="section_id" foreignKey="core_section_allowed_section_id_ab7a9a43_fk_core_sect" implied="false" onDeleteCascade="false" schema="public" table="core_section_allowed_for_target_groups"/>
-            <child column="section_id" foreignKey="core_sectioninfo_section_id_fc76939e_fk_core_section_id" implied="false" onDeleteCascade="false" schema="public" table="core_sectioninfo"/>
+         <column autoUpdated="true" defaultValue="nextval('core_section_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="section_id" foreignKey="core_appropriation_section_id_dac1575b_fk" implied="false" onDeleteCascade="false" schema="public" table="core_appropriation"/>
+            <child column="section_id" foreignKey="core_sectioninfo_section_id_fc76939e_fk" implied="false" onDeleteCascade="false" schema="public" table="core_sectioninfo"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="paragraph" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="text" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
@@ -831,13 +793,9 @@
          </index>
       </table>
       <table name="core_section_allowed_for_steps" numRows="126" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_section_allowed_for_steps_new_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="section_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_section_allowed_section_id_7445c299_fk_core_sect" implied="false" onDeleteCascade="false" schema="public" table="core_section"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="effortstep_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_section_allowed_effortstep_id_d3b9ac71_fk_core_effo" implied="false" onDeleteCascade="false" schema="public" table="core_effortstep"/>
-         </column>
+         <column autoUpdated="true" defaultValue="nextval('core_section_allowed_for_steps_new_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="section_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="effortstep_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="core_section_allowed_for_steps_new_pkey" unique="true">
             <column ascending="true" name="id"/>
@@ -854,13 +812,9 @@
          </index>
       </table>
       <table name="core_section_allowed_for_target_groups" numRows="92" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_section_allowed_for_target_groups_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="section_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_section_allowed_section_id_ab7a9a43_fk_core_sect" implied="false" onDeleteCascade="false" schema="public" table="core_section"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="targetgroup_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_section_allowed_targetgroup_id_fe481df7_fk_core_targ" implied="false" onDeleteCascade="false" schema="public" table="core_targetgroup"/>
-         </column>
+         <column autoUpdated="true" defaultValue="nextval('core_section_allowed_for_target_groups_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="section_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="targetgroup_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="core_section_allowed_for_target_groups_pkey" unique="true">
             <column ascending="true" name="id"/>
@@ -877,19 +831,19 @@
          </index>
       </table>
       <table name="core_sectioninfo" numRows="86" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_sectioninfo_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="true" defaultValue="nextval('core_sectioninfo_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="kle_number" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="sbsys_template_id" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="activity_details_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_sectioninfo_activity_details_id_a7e1634e_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="activity_details_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_sectioninfo_activity_details_id_a7e1634e_fk" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="section_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_sectioninfo_section_id_fc76939e_fk_core_section_id" implied="false" onDeleteCascade="false" schema="public" table="core_section"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="section_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_sectioninfo_section_id_fc76939e_fk" implied="false" onDeleteCascade="false" schema="public" table="core_section"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="main_activity_main_account_number" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="supplementary_activity_main_account_number" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="activity_category_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_sectioninfo_activity_category_id_38181a5c_fk_core_acti" implied="false" onDeleteCascade="false" schema="public" table="core_activitycategory"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="activity_category_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_sectioninfo_activity_category_id_38181a5c_fk" implied="false" onDeleteCascade="false" schema="public" table="core_activitycategory"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
@@ -911,9 +865,8 @@
          </index>
       </table>
       <table name="core_serviceprovider" numRows="421" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_serviceprovider_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="service_provider_id" foreignKey="core_activity_service_provider_id_25faf8a7_fk_core_serv" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
-            <child column="serviceprovider_id" foreignKey="core_activitydetails_serviceprovider_id_7dae5962_fk_core_serv" implied="false" onDeleteCascade="false" schema="public" table="core_activitydetails_service_providers"/>
+         <column autoUpdated="true" defaultValue="nextval('core_serviceprovider_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="service_provider_id" foreignKey="core_activity_service_provider_id_25faf8a7_fk" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="cvr_number" nullable="false" remarks="" size="8" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
@@ -938,10 +891,8 @@
          </index>
       </table>
       <table name="core_targetgroup" numRows="2" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_targetgroup_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="target_group_id" foreignKey="core_case_target_group_id_1ffe0068_fk_core_targetgroup_id" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
-            <child column="targetgroup_id" foreignKey="core_effort_allowed__targetgroup_id_d58deb6e_fk_core_targ" implied="false" onDeleteCascade="false" schema="public" table="core_effort_allowed_for_target_groups"/>
-            <child column="targetgroup_id" foreignKey="core_section_allowed_targetgroup_id_fe481df7_fk_core_targ" implied="false" onDeleteCascade="false" schema="public" table="core_section_allowed_for_target_groups"/>
+         <column autoUpdated="true" defaultValue="nextval('core_targetgroup_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="target_group_id" foreignKey="core_case_target_group_id_1ffe0068_fk" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
@@ -952,12 +903,12 @@
          </index>
       </table>
       <table name="core_team" numRows="5" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_team_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="team_id" foreignKey="core_user_team_id_5bf2f9f1_fk_core_team_id" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
+         <column autoUpdated="true" defaultValue="nextval('core_team_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="team_id" foreignKey="core_user_team_id_5bf2f9f1_fk" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="leader_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_team_leader_id_8c8a2fb8_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="leader_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_team_leader_id_8c8a2fb8_fk" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
@@ -969,30 +920,25 @@
          </index>
       </table>
       <table name="core_user" numRows="7" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_user_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="approval_user_id" foreignKey="core_activity_approval_user_id_98590644_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
-            <child column="case_worker_id" foreignKey="core_case_case_worker_id_9326dffa_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
-            <child column="history_user_id" foreignKey="core_historicalcase_history_user_id_601d37c5_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_historicalcase"/>
-            <child column="history_user_id" foreignKey="core_historicalpayment_history_user_id_ef303773_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_historicalpayment"/>
-            <child column="history_user_id" foreignKey="core_historicalratep_history_user_id_4eac7eec_fk_core_user" implied="false" onDeleteCascade="false" schema="public" table="core_historicalrateperdate"/>
-            <child column="changed_by_id" foreignKey="core_rateperdate_changed_by_id_8058f55c_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_rateperdate"/>
-            <child column="leader_id" foreignKey="core_team_leader_id_8c8a2fb8_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_team"/>
-            <child column="user_id" foreignKey="core_user_groups_user_id_70b4d9b8_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_user_groups"/>
-            <child column="user_id" foreignKey="core_user_user_permissions_user_id_085123d3_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_user_user_permissions"/>
-            <child column="user_id" foreignKey="django_admin_log_user_id_c564eba6_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="django_admin_log"/>
+         <column autoUpdated="true" defaultValue="nextval('core_user_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="approval_user_id" foreignKey="core_activity_approval_user_id_98590644_fk" implied="false" onDeleteCascade="false" schema="public" table="core_activity"/>
+            <child column="case_worker_id" foreignKey="core_case_case_worker_id_9326dffa_fk" implied="false" onDeleteCascade="false" schema="public" table="core_case"/>
+            <child column="changed_by_id" foreignKey="core_rateperdate_changed_by_id_8058f55c_fk" implied="false" onDeleteCascade="false" schema="public" table="core_rateperdate"/>
+            <child column="leader_id" foreignKey="core_team_leader_id_8c8a2fb8_fk" implied="false" onDeleteCascade="false" schema="public" table="core_team"/>
+            <child column="user_id" foreignKey="django_admin_log_user_id_c564eba6_fk" implied="false" onDeleteCascade="false" schema="public" table="django_admin_log"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="password" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="2" name="last_login" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="is_superuser" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="username" nullable="false" remarks="" size="150" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="first_name" nullable="false" remarks="" size="30" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="first_name" nullable="false" remarks="" size="150" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="last_name" nullable="false" remarks="" size="150" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="email" nullable="false" remarks="" size="254" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="is_staff" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="is_active" nullable="false" remarks="" size="1" type="bool" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="10" name="date_joined" nullable="false" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="team_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_user_team_id_5bf2f9f1_fk_core_team_id" implied="false" onDeleteCascade="false" schema="public" table="core_team"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="team_id" nullable="true" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="core_user_team_id_5bf2f9f1_fk" implied="false" onDeleteCascade="false" schema="public" table="core_team"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="profile" nullable="false" remarks="" size="128" type="varchar" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
@@ -1010,10 +956,8 @@
          </index>
       </table>
       <table name="core_user_groups" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_user_groups_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="user_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_user_groups_user_id_70b4d9b8_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
-         </column>
+         <column autoUpdated="true" defaultValue="nextval('core_user_groups_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="user_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="group_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
             <parent column="id" foreignKey="core_user_groups_group_id_fe8c697f_fk_auth_group_id" implied="false" onDeleteCascade="false" schema="public" table="auth_group"/>
          </column>
@@ -1033,10 +977,8 @@
          </index>
       </table>
       <table name="core_user_user_permissions" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_user_user_permissions_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="user_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="core_user_user_permissions_user_id_085123d3_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
-         </column>
+         <column autoUpdated="true" defaultValue="nextval('core_user_user_permissions_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="user_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="permission_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
             <parent column="id" foreignKey="core_user_user_permi_permission_id_35ccf601_fk_auth_perm" implied="false" onDeleteCascade="false" schema="public" table="auth_permission"/>
          </column>
@@ -1056,10 +998,10 @@
          </index>
       </table>
       <table name="core_variablerate" numRows="30" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('core_variablerate_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
-            <child column="variablerate_ptr_id" foreignKey="core_price_variablerate_ptr_id_91a1b913_fk_core_variablerate_id" implied="false" onDeleteCascade="false" schema="public" table="core_price"/>
-            <child column="variablerate_ptr_id" foreignKey="core_rate_variablerate_ptr_id_fa8611d0_fk_core_variablerate_id" implied="false" onDeleteCascade="false" schema="public" table="core_rate"/>
-            <child column="main_rate_id" foreignKey="core_rateperdate_main_rate_id_a786f60a_fk_core_variablerate_id" implied="false" onDeleteCascade="false" schema="public" table="core_rateperdate"/>
+         <column autoUpdated="true" defaultValue="nextval('core_variablerate_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="variablerate_ptr_id" foreignKey="core_price_variablerate_ptr_id_91a1b913_fk" implied="false" onDeleteCascade="false" schema="public" table="core_price"/>
+            <child column="variablerate_ptr_id" foreignKey="core_rate_variablerate_ptr_id_fa8611d0_fk" implied="false" onDeleteCascade="false" schema="public" table="core_rate"/>
+            <child column="main_rate_id" foreignKey="core_rateperdate_main_rate_id_a786f60a_fk" implied="false" onDeleteCascade="false" schema="public" table="core_rateperdate"/>
          </column>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="core_variablerate_pkey" unique="true">
@@ -1076,8 +1018,8 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="content_type_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
             <parent column="id" foreignKey="django_admin_log_content_type_id_c4bce8eb_fk_django_co" implied="false" onDeleteCascade="false" schema="public" table="django_content_type"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="user_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="id" foreignKey="django_admin_log_user_id_c564eba6_fk_core_user_id" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="user_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="django_admin_log_user_id_c564eba6_fk" implied="false" onDeleteCascade="false" schema="public" table="core_user"/>
          </column>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="django_admin_log_pkey" unique="true">
@@ -1107,8 +1049,8 @@
             <column ascending="true" name="model"/>
          </index>
       </table>
-      <table name="django_migrations" numRows="127" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('django_migrations_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+      <table name="django_migrations" numRows="133" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('django_migrations_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="app" nullable="false" remarks="" size="255" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="name" nullable="false" remarks="" size="255" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="3" name="applied" nullable="false" remarks="" size="35" type="timestamptz" typeCode="93"/>
@@ -1133,7 +1075,7 @@
          </index>
       </table>
       <table name="mailer_dontsendentry" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('mailer_dontsendentry_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="true" defaultValue="nextval('mailer_dontsendentry_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="to_address" nullable="false" remarks="" size="254" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="2" name="when_added" nullable="false" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
@@ -1142,7 +1084,7 @@
          </index>
       </table>
       <table name="mailer_message" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('mailer_message_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="true" defaultValue="nextval('mailer_message_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="message_data" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="2" name="when_added" nullable="false" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="priority" nullable="false" remarks="" size="5" type="int2" typeCode="5"/>
@@ -1153,7 +1095,7 @@
          <checkConstraint constraint="((priority &gt;= 0))" name="mailer_message_priority_4f7b1370_check"/>
       </table>
       <table name="mailer_messagelog" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('mailer_messagelog_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="true" defaultValue="nextval('mailer_messagelog_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="message_data" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="6" id="2" name="when_added" nullable="false" remarks="" size="35" type="timestamptz" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="priority" nullable="false" remarks="" size="5" type="int2" typeCode="5"/>

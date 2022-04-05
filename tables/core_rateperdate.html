@@ -104,8 +104,8 @@
                                 <tbody>
                                 <tr>
                                     <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-                                    <td>serial</td>
-                                    <td>10</td>
+                                    <td>bigserial</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
                                     <td>nextval(&#39;core_rateperdate_id_seq&#39;::regclass)</td>
@@ -172,8 +172,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="main_rate_id">main_rate_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -184,8 +184,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_rateperdate.main_rate_id references core_variablerate.id via core_rateperdate_main_rate_id_a786f60a_fk_core_variablerate_id"><a href='core_variablerate.html'>core_variablerate</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_rateperdate_main_rate_id_a786f60a_fk_core_variablerate_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_rateperdate.main_rate_id references core_variablerate.id via core_rateperdate_main_rate_id_a786f60a_fk"><a href='core_variablerate.html'>core_variablerate</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_rateperdate_main_rate_id_a786f60a_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -193,8 +193,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="changed_by_id">changed_by_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -205,8 +205,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_rateperdate.changed_by_id references core_user.id via core_rateperdate_changed_by_id_8058f55c_fk_core_user_id"><a href='core_user.html'>core_user</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_rateperdate_changed_by_id_8058f55c_fk_core_user_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_rateperdate.changed_by_id references core_user.id via core_rateperdate_changed_by_id_8058f55c_fk"><a href='core_user.html'>core_user</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_rateperdate_changed_by_id_8058f55c_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -302,20 +302,15 @@
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="610,111,809,199">
-<area shape="rect" id="node2" href="core_user.html" target="_top" title="core_user" alt="" coords="280,424,452,600">
-<area shape="rect" id="node11" href="core_team.html" target="_top" title="core_team" alt="" coords="25,456,203,544">
-<area shape="rect" id="node3" href="core_case.html" target="_top" title="core_case" alt="" coords="623,216,796,304">
-<area shape="rect" id="node4" href="core_historicalcase.html" target="_top" title="core_historicalcase" alt="" coords="583,321,835,409">
-<area shape="rect" id="node5" href="core_historicalpayment.html" target="_top" title="core_historicalpayment" alt="" coords="565,427,853,515">
-<area shape="rect" id="node6" href="core_historicalrateperdate.html" target="_top" title="core_historicalrateperdate" alt="" coords="553,532,866,620">
-<area shape="rect" id="node7" href="core_price.html" target="_top" title="core_price" alt="" coords="621,1245,798,1333">
-<area shape="rect" id="node8" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="247,1137,485,1231">
-<area shape="rect" id="node9" href="core_rate.html" target="_top" title="core_rate" alt="" coords="625,1140,794,1228">
-<area shape="rect" id="node10" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="529,848,890,1123">
-<area shape="rect" id="node12" href="core_user_groups.html" target="_top" title="core_user_groups" alt="" coords="589,637,829,725">
-<area shape="rect" id="node13" href="core_user_user_permissions.html" target="_top" title="core_user_user_permissions" alt="" coords="545,743,873,831">
-<area shape="rect" id="node14" href="django_admin_log.html" target="_top" title="django_admin_log" alt="" coords="587,5,831,93">
+<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="610,5,809,93">
+<area shape="rect" id="node2" href="core_user.html" target="_top" title="core_user" alt="" coords="280,161,452,337">
+<area shape="rect" id="node8" href="core_team.html" target="_top" title="core_team" alt="" coords="25,193,203,281">
+<area shape="rect" id="node3" href="core_case.html" target="_top" title="core_case" alt="" coords="623,111,796,199">
+<area shape="rect" id="node4" href="core_price.html" target="_top" title="core_price" alt="" coords="621,613,798,701">
+<area shape="rect" id="node5" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="247,611,485,704">
+<area shape="rect" id="node6" href="core_rate.html" target="_top" title="core_rate" alt="" coords="625,719,794,807">
+<area shape="rect" id="node7" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="529,321,890,596">
+<area shape="rect" id="node9" href="django_admin_log.html" target="_top" title="django_admin_log" alt="" coords="587,216,831,304">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_rateperdate.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>

@@ -104,24 +104,24 @@
                                 <tbody>
                                 <tr>
                                     <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-                                    <td>serial</td>
-                                    <td>10</td>
+                                    <td>bigserial</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
                                     <td>nextval(&#39;core_municipality_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_case.acting_municipality_id references core_municipality.id via core_case_acting_municipality__90f8e17b_fk_core_muni"><a href='core_case.html'>core_case</a><span class='relatedKey'>.acting_municipality_id</span></td>
-                                                <td class="constraint detail">core_case_acting_municipality__90f8e17b_fk_core_muni<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_case.acting_municipality_id references core_municipality.id via core_case_acting_municipality_id_90f8e17b_fk"><a href='core_case.html'>core_case</a><span class='relatedKey'>.acting_municipality_id</span></td>
+                                                <td class="constraint detail">core_case_acting_municipality_id_90f8e17b_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
-                                                <td title="core_case.paying_municipality_id references core_municipality.id via core_case_paying_municipality__54fadff6_fk_core_muni"><a href='core_case.html'>core_case</a><span class='relatedKey'>.paying_municipality_id</span></td>
-                                                <td class="constraint detail">core_case_paying_municipality__54fadff6_fk_core_muni<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_case.paying_municipality_id references core_municipality.id via core_case_paying_municipality_id_54fadff6_fk"><a href='core_case.html'>core_case</a><span class='relatedKey'>.paying_municipality_id</span></td>
+                                                <td class="constraint detail">core_case_paying_municipality_id_54fadff6_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
-                                                <td title="core_case.residence_municipality_id references core_municipality.id via core_case_residence_municipali_97f4496a_fk_core_muni"><a href='core_case.html'>core_case</a><span class='relatedKey'>.residence_municipality_id</span></td>
-                                                <td class="constraint detail">core_case_residence_municipali_97f4496a_fk_core_muni<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_case.residence_municipality_id references core_municipality.id via core_case_residence_municipality_id_97f4496a_fk"><a href='core_case.html'>core_case</a><span class='relatedKey'>.residence_municipality_id</span></td>
+                                                <td class="constraint detail">core_case_residence_municipality_id_97f4496a_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -225,15 +225,14 @@
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="695,5,945,93">
-<area shape="rect" id="node2" href="core_case.html" target="_top" title="core_case" alt="" coords="369,108,649,460">
-<area shape="rect" id="node3" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="5,252,325,409">
-<area shape="rect" id="node4" href="core_user.html" target="_top" title="core_user" alt="" coords="79,41,251,129">
-<area shape="rect" id="node5" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="41,147,290,235">
-<area shape="rect" id="node6" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="56,427,275,515">
-<area shape="rect" id="node7" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="47,532,284,620">
-<area shape="rect" id="node8" href="core_case_efforts.html" target="_top" title="core_case_efforts" alt="" coords="702,111,938,199">
-<area shape="rect" id="node9" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="693,216,947,304">
+<area shape="rect" id="node1" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="695,23,945,111">
+<area shape="rect" id="node2" href="core_case.html" target="_top" title="core_case" alt="" coords="369,72,649,424">
+<area shape="rect" id="node3" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="5,216,325,373">
+<area shape="rect" id="node4" href="core_user.html" target="_top" title="core_user" alt="" coords="79,5,251,93">
+<area shape="rect" id="node5" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="41,111,290,199">
+<area shape="rect" id="node6" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="56,391,275,479">
+<area shape="rect" id="node7" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="47,496,284,584">
+<area shape="rect" id="node8" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="693,128,947,216">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_municipality.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>

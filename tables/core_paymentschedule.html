@@ -104,20 +104,20 @@
                                 <tbody>
                                 <tr>
                                     <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-                                    <td>serial</td>
-                                    <td>10</td>
+                                    <td>bigserial</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
                                     <td>nextval(&#39;core_paymentschedule_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_payment.payment_schedule_id references core_paymentschedule.id via core_payment_payment_schedule_id_8a332af5_fk_core_paym"><a href='core_payment.html'>core_payment</a><span class='relatedKey'>.payment_schedule_id</span></td>
-                                                <td class="constraint detail">core_payment_payment_schedule_id_8a332af5_fk_core_paym<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_payment.payment_schedule_id references core_paymentschedule.id via core_payment_payment_schedule_id_8a332af5_fk"><a href='core_payment.html'>core_payment</a><span class='relatedKey'>.payment_schedule_id</span></td>
+                                                <td class="constraint detail">core_payment_payment_schedule_id_8a332af5_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
-                                                <td title="core_price.payment_schedule_id references core_paymentschedule.id via core_price_payment_schedule_id_eccd2c3f_fk_core_paym"><a href='core_price.html'>core_price</a><span class='relatedKey'>.payment_schedule_id</span></td>
-                                                <td class="constraint detail">core_price_payment_schedule_id_eccd2c3f_fk_core_paym<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_price.payment_schedule_id references core_paymentschedule.id via core_price_payment_schedule_id_eccd2c3f_fk"><a href='core_price.html'>core_price</a><span class='relatedKey'>.payment_schedule_id</span></td>
+                                                <td class="constraint detail">core_price_payment_schedule_id_eccd2c3f_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -282,8 +282,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="payment_method_details_id">payment_method_details_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -294,8 +294,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_paymentschedule.payment_method_details_id references core_paymentmethoddetails.id via core_paymentschedule_payment_method_detai_cf32fea5_fk_core_paym"><a href='core_paymentmethoddetails.html'>core_paymentmethoddetails</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_paymentschedule_payment_method_detai_cf32fea5_fk_core_paym<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_paymentschedule.payment_method_details_id references core_paymentmethoddetails.id via core_paymentschedule_payment_method_details_id_cf32fea5_fk"><a href='core_paymentmethoddetails.html'>core_paymentmethoddetails</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_paymentschedule_payment_method_details_id_cf32fea5_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -337,8 +337,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="activity_id">activity_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -349,8 +349,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_paymentschedule.activity_id references core_activity.id via core_paymentschedule_activity_id_57e6b4d5_fk_core_activity_id"><a href='core_activity.html'>core_activity</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_paymentschedule_activity_id_57e6b4d5_fk_core_activity_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_paymentschedule.activity_id references core_activity.id via core_paymentschedule_activity_id_57e6b4d5_fk"><a href='core_activity.html'>core_activity</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_paymentschedule_activity_id_57e6b4d5_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>

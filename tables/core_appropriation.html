@@ -104,16 +104,16 @@
                                 <tbody>
                                 <tr>
                                     <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-                                    <td>serial</td>
-                                    <td>10</td>
+                                    <td>bigserial</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
                                     <td>nextval(&#39;core_appropriation_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_activity.appropriation_id references core_appropriation.id via core_activity_appropriation_id_86d3c658_fk_core_appr"><a href='core_activity.html'>core_activity</a><span class='relatedKey'>.appropriation_id</span></td>
-                                                <td class="constraint detail">core_activity_appropriation_id_86d3c658_fk_core_appr<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_activity.appropriation_id references core_appropriation.id via core_activity_appropriation_id_86d3c658_fk"><a href='core_activity.html'>core_activity</a><span class='relatedKey'>.appropriation_id</span></td>
+                                                <td class="constraint detail">core_activity_appropriation_id_86d3c658_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -159,8 +159,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="case_id">case_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -171,8 +171,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_appropriation.case_id references core_case.id via core_appropriation_case_id_69f8b199_fk_core_case_id"><a href='core_case.html'>core_case</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_appropriation_case_id_69f8b199_fk_core_case_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_appropriation.case_id references core_case.id via core_appropriation_case_id_69f8b199_fk"><a href='core_case.html'>core_case</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_appropriation_case_id_69f8b199_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -180,8 +180,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="section_id">section_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -192,8 +192,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_appropriation.section_id references core_section.id via core_appropriation_section_id_dac1575b_fk_core_section_id"><a href='core_section.html'>core_section</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_appropriation_section_id_dac1575b_fk_core_section_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_appropriation.section_id references core_section.id via core_appropriation_section_id_dac1575b_fk"><a href='core_section.html'>core_section</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_appropriation_section_id_dac1575b_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -353,25 +353,21 @@
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="1177,600,1400,893">
-<area shape="rect" id="node2" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="697,311,1075,644">
-<area shape="rect" id="node3" href="core_approvallevel.html" target="_top" title="core_approvallevel" alt="" coords="761,661,1011,749">
-<area shape="rect" id="node4" href="core_user.html" target="_top" title="core_user" alt="" coords="44,736,216,824">
-<area shape="rect" id="node5" href="core_activitydetails.html" target="_top" title="core_activitydetails" alt="" coords="319,100,575,188">
-<area shape="rect" id="node6" href="core_serviceprovider.html" target="_top" title="core_serviceprovider" alt="" coords="753,1224,1019,1312">
-<area shape="rect" id="node8" href="core_section.html" target="_top" title="core_section" alt="" coords="299,431,595,548">
-<area shape="rect" id="node9" href="core_case.html" target="_top" title="core_case" alt="" coords="307,803,587,1155">
-<area shape="rect" id="node7" href="core_activitydetails_supplementary_activity_for.html" target="_top" title="core_activitydetails_supplementary_activity_for" alt="" coords="639,205,1133,293">
-<area shape="rect" id="node10" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="10,953,250,1041">
-<area shape="rect" id="node11" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="5,848,255,936">
-<area shape="rect" id="node12" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="21,1060,239,1148">
-<area shape="rect" id="node13" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="11,1167,249,1255">
-<area shape="rect" id="node14" href="core_case_efforts.html" target="_top" title="core_case_efforts" alt="" coords="768,908,1004,996">
-<area shape="rect" id="node15" href="core_paymentschedule.html" target="_top" title="core_paymentschedule" alt="" coords="1444,603,1731,691">
-<area shape="rect" id="node16" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="759,1119,1013,1207">
-<area shape="rect" id="node17" href="core_section_allowed_for_steps.html" target="_top" title="core_section_allowed_for_steps" alt="" coords="708,803,1064,891">
-<area shape="rect" id="node18" href="core_section_allowed_for_target_groups.html" target="_top" title="core_section_allowed_for_target_groups" alt="" coords="672,1013,1100,1101">
-<area shape="rect" id="node19" href="core_sectioninfo.html" target="_top" title="core_sectioninfo" alt="" coords="771,100,1001,188">
+<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="1063,599,1286,892">
+<area shape="rect" id="node2" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="639,180,1016,513">
+<area shape="rect" id="node3" href="core_approvallevel.html" target="_top" title="core_approvallevel" alt="" coords="703,672,952,760">
+<area shape="rect" id="node4" href="core_user.html" target="_top" title="core_user" alt="" coords="44,5,216,93">
+<area shape="rect" id="node5" href="core_activitydetails.html" target="_top" title="core_activitydetails" alt="" coords="699,567,955,655">
+<area shape="rect" id="node6" href="core_serviceprovider.html" target="_top" title="core_serviceprovider" alt="" coords="694,777,961,865">
+<area shape="rect" id="node7" href="core_case.html" target="_top" title="core_case" alt="" coords="307,75,587,427">
+<area shape="rect" id="node8" href="core_section.html" target="_top" title="core_section" alt="" coords="299,467,595,584">
+<area shape="rect" id="node9" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="10,221,250,309">
+<area shape="rect" id="node10" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="5,116,255,204">
+<area shape="rect" id="node11" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="21,327,239,415">
+<area shape="rect" id="node12" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="11,432,249,520">
+<area shape="rect" id="node13" href="core_paymentschedule.html" target="_top" title="core_paymentschedule" alt="" coords="1333,601,1620,689">
+<area shape="rect" id="node14" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="701,75,954,163">
+<area shape="rect" id="node15" href="core_sectioninfo.html" target="_top" title="core_sectioninfo" alt="" coords="1060,493,1289,581">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_appropriation.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>

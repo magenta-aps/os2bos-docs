@@ -104,8 +104,8 @@
                                 <tbody>
                                 <tr>
                                     <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-                                    <td>serial</td>
-                                    <td>10</td>
+                                    <td>bigserial</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
                                     <td>nextval(&#39;core_sectioninfo_id_seq&#39;::regclass)</td>
@@ -155,8 +155,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="activity_details_id">activity_details_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -167,8 +167,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_sectioninfo.activity_details_id references core_activitydetails.id via core_sectioninfo_activity_details_id_a7e1634e_fk_core_acti"><a href='core_activitydetails.html'>core_activitydetails</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_sectioninfo_activity_details_id_a7e1634e_fk_core_acti<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_sectioninfo.activity_details_id references core_activitydetails.id via core_sectioninfo_activity_details_id_a7e1634e_fk"><a href='core_activitydetails.html'>core_activitydetails</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_sectioninfo_activity_details_id_a7e1634e_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -176,8 +176,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="section_id">section_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -188,8 +188,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_sectioninfo.section_id references core_section.id via core_sectioninfo_section_id_fc76939e_fk_core_section_id"><a href='core_section.html'>core_section</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_sectioninfo_section_id_fc76939e_fk_core_section_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_sectioninfo.section_id references core_section.id via core_sectioninfo_section_id_fc76939e_fk"><a href='core_section.html'>core_section</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_sectioninfo_section_id_fc76939e_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -231,8 +231,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="activity_category_id">activity_category_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -243,8 +243,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_sectioninfo.activity_category_id references core_activitycategory.id via core_sectioninfo_activity_category_id_38181a5c_fk_core_acti"><a href='core_activitycategory.html'>core_activitycategory</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_sectioninfo_activity_category_id_38181a5c_fk_core_acti<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_sectioninfo.activity_category_id references core_activitycategory.id via core_sectioninfo_activity_category_id_38181a5c_fk"><a href='core_activitycategory.html'>core_activitycategory</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_sectioninfo_activity_category_id_38181a5c_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -353,17 +353,12 @@
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="972,373,1171,461">
-<area shape="rect" id="node2" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="511,5,762,93">
-<area shape="rect" id="node3" href="core_activitydetails.html" target="_top" title="core_activitydetails" alt="" coords="12,791,295,937">
-<area shape="rect" id="node7" href="core_section.html" target="_top" title="core_section" alt="" coords="5,213,301,331">
-<area shape="rect" id="node4" href="core_activitydetails_main_activities.html" target="_top" title="core_activitydetails_main_activities" alt="" coords="441,813,832,901">
-<area shape="rect" id="node5" href="core_activitydetails_service_providers.html" target="_top" title="core_activitydetails_service_providers" alt="" coords="431,919,843,1007">
-<area shape="rect" id="node6" href="core_activitydetails_supplementary_activity_for.html" target="_top" title="core_activitydetails_supplementary_activity_for" alt="" coords="389,321,884,409">
-<area shape="rect" id="node8" href="core_section_allowed_for_steps.html" target="_top" title="core_section_allowed_for_steps" alt="" coords="459,111,815,199">
-<area shape="rect" id="node9" href="core_section_allowed_for_target_groups.html" target="_top" title="core_section_allowed_for_target_groups" alt="" coords="423,216,851,304">
-<area shape="rect" id="node10" href="core_sectioninfo.html" target="_top" title="core_sectioninfo" alt="" coords="345,427,928,760">
-<area shape="rect" id="node11" href="core_activitycategory.html" target="_top" title="core_activitycategory" alt="" coords="17,635,289,752">
+<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="864,7,1063,95">
+<area shape="rect" id="node2" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="361,5,612,93">
+<area shape="rect" id="node3" href="core_activitydetails.html" target="_top" title="core_activitydetails" alt="" coords="345,111,628,257">
+<area shape="rect" id="node4" href="core_section.html" target="_top" title="core_section" alt="" coords="5,119,301,236">
+<area shape="rect" id="node5" href="core_sectioninfo.html" target="_top" title="core_sectioninfo" alt="" coords="672,113,1255,447">
+<area shape="rect" id="node6" href="core_activitycategory.html" target="_top" title="core_activitycategory" alt="" coords="351,321,623,439">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_sectioninfo.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>

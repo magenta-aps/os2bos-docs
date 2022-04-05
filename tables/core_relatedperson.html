@@ -104,8 +104,8 @@
                                 <tbody>
                                 <tr>
                                     <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-                                    <td>serial</td>
-                                    <td>10</td>
+                                    <td>bigserial</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
                                     <td>nextval(&#39;core_relatedperson_id_seq&#39;::regclass)</td>
@@ -189,8 +189,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="main_case_id">main_case_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -201,8 +201,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_relatedperson.main_case_id references core_case.id via core_relatedperson_main_case_id_f0d129a9_fk_core_case_id"><a href='core_case.html'>core_case</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_relatedperson_main_case_id_f0d129a9_fk_core_case_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_relatedperson.main_case_id references core_case.id via core_relatedperson_main_case_id_f0d129a9_fk"><a href='core_case.html'>core_case</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_relatedperson_main_case_id_f0d129a9_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -360,14 +360,13 @@
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
 <area shape="rect" id="node1" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="708,5,959,93">
-<area shape="rect" id="node2" href="core_case.html" target="_top" title="core_case" alt="" coords="299,108,579,460">
-<area shape="rect" id="node3" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="10,257,250,345">
-<area shape="rect" id="node4" href="core_user.html" target="_top" title="core_user" alt="" coords="44,47,216,135">
-<area shape="rect" id="node5" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="5,152,255,240">
-<area shape="rect" id="node6" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="21,363,239,451">
-<area shape="rect" id="node7" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="11,468,249,556">
-<area shape="rect" id="node8" href="core_case_efforts.html" target="_top" title="core_case_efforts" alt="" coords="715,111,951,199">
-<area shape="rect" id="node9" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="623,216,1044,608">
+<area shape="rect" id="node2" href="core_case.html" target="_top" title="core_case" alt="" coords="299,131,579,483">
+<area shape="rect" id="node3" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="10,280,250,368">
+<area shape="rect" id="node4" href="core_user.html" target="_top" title="core_user" alt="" coords="44,69,216,157">
+<area shape="rect" id="node5" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="5,175,255,263">
+<area shape="rect" id="node6" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="21,385,239,473">
+<area shape="rect" id="node7" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="11,491,249,579">
+<area shape="rect" id="node8" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="623,111,1044,503">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_relatedperson.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>

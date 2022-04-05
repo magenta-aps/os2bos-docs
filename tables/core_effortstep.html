@@ -104,20 +104,16 @@
                                 <tbody>
                                 <tr>
                                     <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-                                    <td>serial</td>
-                                    <td>10</td>
+                                    <td>bigserial</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
                                     <td>nextval(&#39;core_effortstep_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_case.effort_step_id references core_effortstep.id via core_case_effort_step_id_64ae08a0_fk_core_effortstep_id"><a href='core_case.html'>core_case</a><span class='relatedKey'>.effort_step_id</span></td>
-                                                <td class="constraint detail">core_case_effort_step_id_64ae08a0_fk_core_effortstep_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td title="core_section_allowed_for_steps.effortstep_id references core_effortstep.id via core_section_allowed_effortstep_id_d3b9ac71_fk_core_effo"><a href='core_section_allowed_for_steps.html'>core_section_allowed_for_steps</a><span class='relatedKey'>.effortstep_id</span></td>
-                                                <td class="constraint detail">core_section_allowed_effortstep_id_d3b9ac71_fk_core_effo<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_case.effort_step_id references core_effortstep.id via core_case_effort_step_id_64ae08a0_fk"><a href='core_case.html'>core_case</a><span class='relatedKey'>.effort_step_id</span></td>
+                                                <td class="constraint detail">core_case_effort_step_id_64ae08a0_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -263,25 +259,21 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_case.html" target="_top" title="core_case" alt="" coords="387,5,667,357">
-<area shape="rect" id="node2" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="5,320,305,507">
-<area shape="rect" id="node3" href="core_section_allowed_for_steps.html" target="_top" title="core_section_allowed_for_steps" alt="" coords="349,375,705,527">
+<area shape="rect" id="node1" href="core_case.html" target="_top" title="core_case" alt="" coords="349,5,629,357">
+<area shape="rect" id="node2" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="5,208,305,395">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/core_effortstep.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="726,283,977,371">
-<area shape="rect" id="node2" href="core_case.html" target="_top" title="core_case" alt="" coords="349,55,629,407">
-<area shape="rect" id="node3" href="core_section.html" target="_top" title="core_section" alt="" coords="391,424,587,512">
-<area shape="rect" id="node4" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="35,219,275,307">
-<area shape="rect" id="node5" href="core_user.html" target="_top" title="core_user" alt="" coords="69,8,241,96">
-<area shape="rect" id="node6" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="31,113,280,201">
-<area shape="rect" id="node7" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="5,451,305,637">
-<area shape="rect" id="node8" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="37,324,274,412">
-<area shape="rect" id="node9" href="core_case_efforts.html" target="_top" title="core_case_efforts" alt="" coords="733,5,969,93">
-<area shape="rect" id="node10" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="725,111,978,199">
-<area shape="rect" id="node11" href="core_section_allowed_for_steps.html" target="_top" title="core_section_allowed_for_steps" alt="" coords="673,416,1029,568">
+<area shape="rect" id="node1" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="675,17,925,105">
+<area shape="rect" id="node2" href="core_case.html" target="_top" title="core_case" alt="" coords="349,67,629,419">
+<area shape="rect" id="node3" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="35,216,275,304">
+<area shape="rect" id="node4" href="core_user.html" target="_top" title="core_user" alt="" coords="69,5,241,93">
+<area shape="rect" id="node5" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="31,111,280,199">
+<area shape="rect" id="node6" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="5,321,305,508">
+<area shape="rect" id="node7" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="37,525,274,613">
+<area shape="rect" id="node8" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="673,123,927,211">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_effortstep.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>

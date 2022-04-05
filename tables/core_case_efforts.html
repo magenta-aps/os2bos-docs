@@ -104,8 +104,8 @@
                                 <tbody>
                                 <tr>
                                     <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-                                    <td>serial</td>
-                                    <td>10</td>
+                                    <td>bigserial</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
                                     <td>nextval(&#39;core_case_efforts_id_seq&#39;::regclass)</td>
@@ -120,9 +120,9 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="case_id">case_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="case_id">case_id</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -132,18 +132,14 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
-                                            <tr>
-                                                <td title="core_case_efforts.case_id references core_case.id via core_case_efforts_case_id_e0f4d85e_fk_core_case_id"><a href='core_case.html'>core_case</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_case_efforts_case_id_e0f4d85e_fk_core_case_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="effort_id">effort_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="effort_id">effort_id</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -153,10 +149,6 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
-                                            <tr>
-                                                <td title="core_case_efforts.effort_id references core_effort.id via core_case_efforts_effort_id_7fcaf9f8_fk_core_effort_id"><a href='core_effort.html'>core_effort</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_case_efforts_effort_id_7fcaf9f8_fk_core_effort_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -213,50 +205,10 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <i class="fa fa-code-fork"></i>
-                            <h3 id="Relationships" class="box-title">Relationships</h3>
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                            </div>
-                        </div>
-                        <div class="box-body">
-                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
-                                <h5>Close relationships within degrees of separation</h5>
-                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
-                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
-                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
-                                </ul>
-                                <div class="tab-content no-padding">
-                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
-                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_case_efforts.html" target="_top" title="core_case_efforts" alt="" coords="329,144,621,301">
-<area shape="rect" id="node2" href="core_case.html" target="_top" title="core_case" alt="" coords="5,5,285,357">
-<area shape="rect" id="node3" href="core_effort.html" target="_top" title="core_effort" alt="" coords="55,375,236,492">
-</map>
-                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/core_case_efforts.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
-                                    </div>
-                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
-                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="704,5,955,93">
-<area shape="rect" id="node2" href="core_case.html" target="_top" title="core_case" alt="" coords="299,55,579,407">
-<area shape="rect" id="node3" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="10,219,250,307">
-<area shape="rect" id="node4" href="core_user.html" target="_top" title="core_user" alt="" coords="44,8,216,96">
-<area shape="rect" id="node5" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="5,113,255,201">
-<area shape="rect" id="node6" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="21,324,239,412">
-<area shape="rect" id="node7" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="11,468,249,556">
-<area shape="rect" id="node8" href="core_case_efforts.html" target="_top" title="core_case_efforts" alt="" coords="683,255,975,412">
-<area shape="rect" id="node9" href="core_effort.html" target="_top" title="core_effort" alt="" coords="348,424,529,541">
-<area shape="rect" id="node10" href="core_effort_allowed_for_target_groups.html" target="_top" title="core_effort_allowed_for_target_groups" alt="" coords="623,476,1036,564">
-<area shape="rect" id="node11" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="703,111,956,199">
-</map>
-                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_case_efforts.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.box-body -->
+                    <div class="alert alert-warning alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
+                        <p>No diagrams were produced please see application output for any errors</p>
                     </div>
                 </section>
                 <script>

@@ -104,24 +104,24 @@
                                 <tbody>
                                 <tr>
                                     <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-                                    <td>serial</td>
-                                    <td>10</td>
+                                    <td>bigserial</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
                                     <td>nextval(&#39;core_variablerate_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_price.variablerate_ptr_id references core_variablerate.id via core_price_variablerate_ptr_id_91a1b913_fk_core_variablerate_id"><a href='core_price.html'>core_price</a><span class='relatedKey'>.variablerate_ptr_id</span></td>
-                                                <td class="constraint detail">core_price_variablerate_ptr_id_91a1b913_fk_core_variablerate_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_price.variablerate_ptr_id references core_variablerate.id via core_price_variablerate_ptr_id_91a1b913_fk"><a href='core_price.html'>core_price</a><span class='relatedKey'>.variablerate_ptr_id</span></td>
+                                                <td class="constraint detail">core_price_variablerate_ptr_id_91a1b913_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
-                                                <td title="core_rate.variablerate_ptr_id references core_variablerate.id via core_rate_variablerate_ptr_id_fa8611d0_fk_core_variablerate_id"><a href='core_rate.html'>core_rate</a><span class='relatedKey'>.variablerate_ptr_id</span></td>
-                                                <td class="constraint detail">core_rate_variablerate_ptr_id_fa8611d0_fk_core_variablerate_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_rate.variablerate_ptr_id references core_variablerate.id via core_rate_variablerate_ptr_id_fa8611d0_fk"><a href='core_rate.html'>core_rate</a><span class='relatedKey'>.variablerate_ptr_id</span></td>
+                                                <td class="constraint detail">core_rate_variablerate_ptr_id_fa8611d0_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
-                                                <td title="core_rateperdate.main_rate_id references core_variablerate.id via core_rateperdate_main_rate_id_a786f60a_fk_core_variablerate_id"><a href='core_rateperdate.html'>core_rateperdate</a><span class='relatedKey'>.main_rate_id</span></td>
-                                                <td class="constraint detail">core_rateperdate_main_rate_id_a786f60a_fk_core_variablerate_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_rateperdate.main_rate_id references core_variablerate.id via core_rateperdate_main_rate_id_a786f60a_fk"><a href='core_rateperdate.html'>core_rateperdate</a><span class='relatedKey'>.main_rate_id</span></td>
+                                                <td class="constraint detail">core_rateperdate_main_rate_id_a786f60a_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -184,21 +184,21 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_price.html" target="_top" title="core_price" alt="" coords="343,5,584,128">
-<area shape="rect" id="node2" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="5,143,299,241">
-<area shape="rect" id="node3" href="core_rate.html" target="_top" title="core_rate" alt="" coords="349,145,577,263">
-<area shape="rect" id="node4" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="345,280,581,456">
+<area shape="rect" id="node1" href="core_price.html" target="_top" title="core_price" alt="" coords="367,5,608,128">
+<area shape="rect" id="node2" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="5,143,323,241">
+<area shape="rect" id="node3" href="core_rate.html" target="_top" title="core_rate" alt="" coords="373,145,601,263">
+<area shape="rect" id="node4" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="369,280,605,456">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/core_variablerate.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_paymentschedule.html" target="_top" title="core_paymentschedule" alt="" coords="623,60,909,148">
-<area shape="rect" id="node2" href="core_rate.html" target="_top" title="core_rate" alt="" coords="347,59,575,176">
-<area shape="rect" id="node4" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="5,56,299,155">
-<area shape="rect" id="node3" href="core_price.html" target="_top" title="core_price" alt="" coords="953,5,1195,128">
-<area shape="rect" id="node5" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="343,193,579,369">
-<area shape="rect" id="node6" href="core_user.html" target="_top" title="core_user" alt="" coords="66,255,238,343">
+<area shape="rect" id="node1" href="core_paymentschedule.html" target="_top" title="core_paymentschedule" alt="" coords="647,60,933,148">
+<area shape="rect" id="node2" href="core_rate.html" target="_top" title="core_rate" alt="" coords="371,59,599,176">
+<area shape="rect" id="node4" href="core_variablerate.html" target="_top" title="core_variablerate" alt="" coords="5,56,323,155">
+<area shape="rect" id="node3" href="core_price.html" target="_top" title="core_price" alt="" coords="977,5,1219,128">
+<area shape="rect" id="node5" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="367,193,603,369">
+<area shape="rect" id="node6" href="core_user.html" target="_top" title="core_user" alt="" coords="78,255,250,343">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_variablerate.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>

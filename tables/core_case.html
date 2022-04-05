@@ -104,24 +104,20 @@
                                 <tbody>
                                 <tr>
                                     <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-                                    <td>serial</td>
-                                    <td>10</td>
+                                    <td>bigserial</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
                                     <td>nextval(&#39;core_case_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_appropriation.case_id references core_case.id via core_appropriation_case_id_69f8b199_fk_core_case_id"><a href='core_appropriation.html'>core_appropriation</a><span class='relatedKey'>.case_id</span></td>
-                                                <td class="constraint detail">core_appropriation_case_id_69f8b199_fk_core_case_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_appropriation.case_id references core_case.id via core_appropriation_case_id_69f8b199_fk"><a href='core_appropriation.html'>core_appropriation</a><span class='relatedKey'>.case_id</span></td>
+                                                <td class="constraint detail">core_appropriation_case_id_69f8b199_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
-                                                <td title="core_case_efforts.case_id references core_case.id via core_case_efforts_case_id_e0f4d85e_fk_core_case_id"><a href='core_case_efforts.html'>core_case_efforts</a><span class='relatedKey'>.case_id</span></td>
-                                                <td class="constraint detail">core_case_efforts_case_id_e0f4d85e_fk_core_case_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td title="core_relatedperson.main_case_id references core_case.id via core_relatedperson_main_case_id_f0d129a9_fk_core_case_id"><a href='core_relatedperson.html'>core_relatedperson</a><span class='relatedKey'>.main_case_id</span></td>
-                                                <td class="constraint detail">core_relatedperson_main_case_id_f0d129a9_fk_core_case_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_relatedperson.main_case_id references core_case.id via core_relatedperson_main_case_id_f0d129a9_fk"><a href='core_relatedperson.html'>core_relatedperson</a><span class='relatedKey'>.main_case_id</span></td>
+                                                <td class="constraint detail">core_relatedperson_main_case_id_f0d129a9_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -235,8 +231,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="acting_municipality_id">acting_municipality_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -247,8 +243,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_case.acting_municipality_id references core_municipality.id via core_case_acting_municipality__90f8e17b_fk_core_muni"><a href='core_municipality.html'>core_municipality</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_case_acting_municipality__90f8e17b_fk_core_muni<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_case.acting_municipality_id references core_municipality.id via core_case_acting_municipality_id_90f8e17b_fk"><a href='core_municipality.html'>core_municipality</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_case_acting_municipality_id_90f8e17b_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -256,8 +252,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="case_worker_id">case_worker_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -268,8 +264,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_case.case_worker_id references core_user.id via core_case_case_worker_id_9326dffa_fk_core_user_id"><a href='core_user.html'>core_user</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_case_case_worker_id_9326dffa_fk_core_user_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_case.case_worker_id references core_user.id via core_case_case_worker_id_9326dffa_fk"><a href='core_user.html'>core_user</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_case_case_worker_id_9326dffa_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -277,8 +273,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="district_id">district_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -289,8 +285,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_case.district_id references core_schooldistrict.id via core_case_district_id_2d51464f_fk_core_schooldistrict_id"><a href='core_schooldistrict.html'>core_schooldistrict</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_case_district_id_2d51464f_fk_core_schooldistrict_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_case.district_id references core_schooldistrict.id via core_case_district_id_2d51464f_fk"><a href='core_schooldistrict.html'>core_schooldistrict</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_case_district_id_2d51464f_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -298,8 +294,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="paying_municipality_id">paying_municipality_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -310,8 +306,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_case.paying_municipality_id references core_municipality.id via core_case_paying_municipality__54fadff6_fk_core_muni"><a href='core_municipality.html'>core_municipality</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_case_paying_municipality__54fadff6_fk_core_muni<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_case.paying_municipality_id references core_municipality.id via core_case_paying_municipality_id_54fadff6_fk"><a href='core_municipality.html'>core_municipality</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_case_paying_municipality_id_54fadff6_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -319,8 +315,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="residence_municipality_id">residence_municipality_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -331,8 +327,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_case.residence_municipality_id references core_municipality.id via core_case_residence_municipali_97f4496a_fk_core_muni"><a href='core_municipality.html'>core_municipality</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_case_residence_municipali_97f4496a_fk_core_muni<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_case.residence_municipality_id references core_municipality.id via core_case_residence_municipality_id_97f4496a_fk"><a href='core_municipality.html'>core_municipality</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_case_residence_municipality_id_97f4496a_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -340,8 +336,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="effort_step_id">effort_step_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -352,8 +348,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_case.effort_step_id references core_effortstep.id via core_case_effort_step_id_64ae08a0_fk_core_effortstep_id"><a href='core_effortstep.html'>core_effortstep</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_case_effort_step_id_64ae08a0_fk_core_effortstep_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_case.effort_step_id references core_effortstep.id via core_case_effort_step_id_64ae08a0_fk"><a href='core_effortstep.html'>core_effortstep</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_case_effort_step_id_64ae08a0_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -361,8 +357,8 @@
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="target_group_id">target_group_id</span></td>
-                                    <td>int4</td>
-                                    <td>10</td>
+                                    <td>int8</td>
+                                    <td>19</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -373,8 +369,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="core_case.target_group_id references core_targetgroup.id via core_case_target_group_id_1ffe0068_fk_core_targetgroup_id"><a href='core_targetgroup.html'>core_targetgroup</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">core_case_target_group_id_1ffe0068_fk_core_targetgroup_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="core_case.target_group_id references core_targetgroup.id via core_case_target_group_id_1ffe0068_fk"><a href='core_targetgroup.html'>core_targetgroup</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">core_case_target_group_id_1ffe0068_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -582,42 +578,31 @@
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
 <area shape="rect" id="node1" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="804,5,1055,211">
-<area shape="rect" id="node2" href="core_case.html" target="_top" title="core_case" alt="" coords="316,255,753,852">
-<area shape="rect" id="node3" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="19,551,259,668">
-<area shape="rect" id="node4" href="core_user.html" target="_top" title="core_user" alt="" coords="53,223,225,399">
-<area shape="rect" id="node5" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="14,416,263,533">
-<area shape="rect" id="node6" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="29,685,248,832">
-<area shape="rect" id="node7" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="5,849,272,967">
-<area shape="rect" id="node8" href="core_case_efforts.html" target="_top" title="core_case_efforts" alt="" coords="811,228,1047,380">
-<area shape="rect" id="node9" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="797,397,1061,544">
+<area shape="rect" id="node2" href="core_case.html" target="_top" title="core_case" alt="" coords="316,157,753,755">
+<area shape="rect" id="node3" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="19,453,259,571">
+<area shape="rect" id="node4" href="core_user.html" target="_top" title="core_user" alt="" coords="53,125,225,301">
+<area shape="rect" id="node5" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="14,319,263,436">
+<area shape="rect" id="node6" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="29,588,248,735">
+<area shape="rect" id="node7" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="5,752,272,869">
+<area shape="rect" id="node8" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="797,228,1061,375">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/core_case.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="1477,661,1676,749">
-<area shape="rect" id="node2" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="1101,824,1352,1029">
-<area shape="rect" id="node3" href="core_user.html" target="_top" title="core_user" alt="" coords="275,424,447,600">
-<area shape="rect" id="node4" href="core_case.html" target="_top" title="core_case" alt="" coords="539,779,976,1376">
-<area shape="rect" id="node5" href="core_section.html" target="_top" title="core_section" alt="" coords="263,1461,459,1549">
-<area shape="rect" id="node20" href="core_team.html" target="_top" title="core_team" alt="" coords="5,456,184,544">
-<area shape="rect" id="node6" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="241,1089,481,1207">
-<area shape="rect" id="node7" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="237,955,486,1072">
-<area shape="rect" id="node8" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="252,1268,471,1415">
-<area shape="rect" id="node9" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="228,1637,495,1755">
-<area shape="rect" id="node10" href="core_case_efforts.html" target="_top" title="core_case_efforts" alt="" coords="1109,1215,1345,1367">
-<area shape="rect" id="node11" href="core_effort.html" target="_top" title="core_effort" alt="" coords="667,1535,848,1623">
-<area shape="rect" id="node12" href="core_effort_allowed_for_target_groups.html" target="_top" title="core_effort_allowed_for_target_groups" alt="" coords="1020,1676,1433,1764">
-<area shape="rect" id="node13" href="core_historicalcase.html" target="_top" title="core_historicalcase" alt="" coords="631,5,883,93">
-<area shape="rect" id="node14" href="core_historicalpayment.html" target="_top" title="core_historicalpayment" alt="" coords="613,111,901,199">
-<area shape="rect" id="node15" href="core_historicalrateperdate.html" target="_top" title="core_historicalrateperdate" alt="" coords="601,216,914,304">
-<area shape="rect" id="node16" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="639,321,875,409">
-<area shape="rect" id="node17" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="1095,660,1359,807">
-<area shape="rect" id="node18" href="core_section_allowed_for_steps.html" target="_top" title="core_section_allowed_for_steps" alt="" coords="579,1393,935,1481">
-<area shape="rect" id="node19" href="core_section_allowed_for_target_groups.html" target="_top" title="core_section_allowed_for_target_groups" alt="" coords="543,1640,971,1728">
-<area shape="rect" id="node21" href="core_user_groups.html" target="_top" title="core_user_groups" alt="" coords="637,427,877,515">
-<area shape="rect" id="node22" href="core_user_user_permissions.html" target="_top" title="core_user_user_permissions" alt="" coords="593,568,921,656">
-<area shape="rect" id="node23" href="django_admin_log.html" target="_top" title="django_admin_log" alt="" coords="635,673,879,761">
+<area shape="rect" id="node1" href="core_activity.html" target="_top" title="core_activity" alt="" coords="1328,150,1527,238">
+<area shape="rect" id="node2" href="core_appropriation.html" target="_top" title="core_appropriation" alt="" coords="1027,313,1277,518">
+<area shape="rect" id="node3" href="core_user.html" target="_top" title="core_user" alt="" coords="275,107,447,283">
+<area shape="rect" id="node4" href="core_case.html" target="_top" title="core_case" alt="" coords="539,267,976,865">
+<area shape="rect" id="node5" href="core_section.html" target="_top" title="core_section" alt="" coords="659,882,855,970">
+<area shape="rect" id="node12" href="core_team.html" target="_top" title="core_team" alt="" coords="5,139,184,227">
+<area shape="rect" id="node6" href="core_municipality.html" target="_top" title="core_municipality" alt="" coords="241,526,481,643">
+<area shape="rect" id="node7" href="core_schooldistrict.html" target="_top" title="core_schooldistrict" alt="" coords="237,391,486,509">
+<area shape="rect" id="node8" href="core_effortstep.html" target="_top" title="core_effortstep" alt="" coords="252,661,471,807">
+<area shape="rect" id="node9" href="core_targetgroup.html" target="_top" title="core_targetgroup" alt="" coords="228,825,495,942">
+<area shape="rect" id="node10" href="core_rateperdate.html" target="_top" title="core_rateperdate" alt="" coords="639,57,875,145">
+<area shape="rect" id="node11" href="core_relatedperson.html" target="_top" title="core_relatedperson" alt="" coords="1020,149,1284,295">
+<area shape="rect" id="node13" href="django_admin_log.html" target="_top" title="django_admin_log" alt="" coords="635,162,879,250">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/core_case.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
